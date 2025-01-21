@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-secondary text-white font-normal font-karla text-lg rounded-10 uppercase shadow-md hover:bg-primary focus:outline-none focus:ring focus:bg-primary focus:ring-opacity-75;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -21,8 +27,35 @@ body {
 }
 
 .text-gradient {
-  background-image: linear-gradient(269.37deg, #DD8024 40.44%, #FFE5CB 72.41%);
+  background-image: linear-gradient(269.37deg, #dd8024 40.44%, #ffe5cb 72.41%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.slick-track {
+  align-items: center;
+  display: flex !important;
+}
+/* ==================== */
+
+.vertical-scroll-snap {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
+  max-height: 85vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.vertical-scroll-snap::-webkit-scrollbar {
+  display: none;
+}
+
+.stacking-slide {
+  scroll-snap-align: start;
+  height: 85vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
 }

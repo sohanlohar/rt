@@ -45,20 +45,38 @@ const slidesData = [
 
 const TestimonialOne = () => {
   const settings = {
-    dots: false,
+    cssEase: "linear",
+    centerMode: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 3000,
     arrows: false,
+    dots: false,
+    pauseOnHover: true,
+  };
+  const settings2 = {
+    cssEase: "linear",
+    centerMode: true,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 4500,
+    arrows: false,
+    dots: false,
+    pauseOnHover: true,
   };
   return (
     <div className="py-10">
       <Slider {...settings}>
         {slidesData.map((slide, index) => {
           return (
-            <div className="slide-wrapper" key={index}>
-              <div className="flex gap-5 flex-col justify-center bg-gray px-5 py-10 m-3 border border-[#00000033] rounded-3xl">
+            <div className="slide-wrapper w-[600px]" key={index}>
+              <div className="flex gap-5 flex-col justify-center bg-white px-5 py-10 m-3 border border-[#00000033] rounded-3xl">
                 <div className="flex items-center gap-5">
                   <div className="w-10 h-10 rounded-full">
                     <Image
@@ -86,11 +104,11 @@ const TestimonialOne = () => {
           );
         })}
       </Slider>
-      <Slider {...settings}>
+      <Slider {...settings2}>
         {slidesData.map((slide, index) => {
           return (
             <div className="slide-wrapper" key={index}>
-              <div className="flex gap-5 flex-col justify-center bg-gray px-5 py-10 m-3 border border-[#00000033] rounded-3xl">
+              <div className="flex gap-5 flex-col justify-center bg-white px-5 py-10 m-3 border border-[#00000033] rounded-3xl">
                 <div className="flex items-center gap-5">
                   <div className="w-10 h-10 rounded-full">
                     <Image

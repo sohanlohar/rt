@@ -1,6 +1,6 @@
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
-import "@/styles/globals.css";
+import '@/styles/globals.css';
 import { Archivo, Karla, Poppins } from "next/font/google";
 
 const karla = Karla({
@@ -20,10 +20,10 @@ const poppins = Poppins({
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className="flex flex-col justify-between gap-6">
+    <div className="">
       <Header />
       <div
-        className={`${karla.className} ${archivo.className} ${poppins.className} max-w-90 mx-auto`}
+        className={`${karla.className} ${archivo.className} ${poppins.className}`}
       >
         <Component {...pageProps} />
       </div>

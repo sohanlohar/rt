@@ -13,7 +13,8 @@ module.exports = {
         primary: {
           DEFAULT: "#016E7C",
           light: "#B6D2D5",
-          dark: "#014B52",
+          dark: "#01263B",
+          extraDark: "#014D57",
         },
         secondary: {
           DEFAULT: "#F69331",
@@ -42,7 +43,11 @@ module.exports = {
       boxShadow: {
         0: "0px 4px 50px 0px #00000040",
       },
+      width: {
+        85: "85%",
+      },
       maxWidth: {
+        85: "85%",
         90: "90%",
       },
       borderRadius: {
@@ -53,7 +58,16 @@ module.exports = {
       backgroundImage: {
         "gradient-custom":
           "linear-gradient(269.37deg, #DD8024 40.44%, #FFE5CB 72.41%)",
+        "custom-gradient2":
+          "linear-gradient(52.91deg, rgba(0, 38, 58, 1) 1.12%, rgba(2, 113, 126, 1) 79.96%)",
       },
+    },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
     },
   },
   plugins: [],

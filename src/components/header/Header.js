@@ -13,54 +13,47 @@ const Header = () => {
 
   return (
     <>
-      <nav className="bg-white w-full z-50">
-        <div className="max-w-90 mx-auto bg-white shadow-0 mt-5 rounded-xl px-4 sm:px-6 lg:px-8 border py-1">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex-shrink-0 w-[150px]">
-              <Link href="/" className="text-xl font-bold text-gray-800">
-                <Image src={RTlogo} alt="RT Logo" />
-              </Link>
-            </div>
+      <nav className="bg-white w-85 z-50 shadow-0 mx-auto h-20 my-8 rounded-xl border  border-[#00000033] flex justify-between items-center px-4 sm:px-6 lg:px-8">
+        <div className="flex-shrink-0 w-[150px]">
+          <Link href="/" className="text-xl font-bold text-gray-800">
+            <Image src={RTlogo} alt="RT Logo" />
+          </Link>
+        </div>
 
-            <div className="hidden md:flex gap-10">
-              <NavLink href="/about-us">About Us</NavLink>
-              <NavLink href="/services">Services</NavLink>
-              <NavLink href="/portfolio">PORTFOLIO</NavLink>
-              <NavLink href="/career">CAREER</NavLink>
-              <NavLink href="/blog">BLOG</NavLink>
-            </div>
-            <div className="">
-              <button className="inline-flex items-center font-normal font-karla text-lg bg-amber-500 border-0 py-2 px-4 text-white rounded-lg uppercase">
-                Contact US
-              </button>
-            </div>
+        <div className="hidden md:flex gap-10">
+          <NavLink href="/about-us">About Us</NavLink>
+          <NavLink href="/services">Services</NavLink>
+          <NavLink href="/portfolio">PORTFOLIO</NavLink>
+          <NavLink href="/career">CAREER</NavLink>
+          <NavLink href="/blog">BLOG</NavLink>
+        </div>
+        <div className="">
+          <button className="btn-primary">Contact US</button>
+          {/* <button className="inline-flex items-center font-normal font-karla text-lg bg-amber-500 border-0 py-2 px-4 text-white rounded-lg uppercase">
+            Contact US
+          </button> */}
+        </div>
 
-            <div className="md:hidden">
-              <button
-                onClick={toggleMenu}
-                className="text-gray-800 hover:text-blue-500 focus:outline-none"
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d={
-                      isOpen
-                        ? "M6 18L18 6M6 6l12 12"
-                        : "M4 6h16M4 12h16M4 18h16"
-                    }
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
+        <div className="md:hidden">
+          <button
+            onClick={toggleMenu}
+            className="text-gray-800 hover:text-blue-500 focus:outline-none"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+              />
+            </svg>
+          </button>
         </div>
 
         {isOpen && (

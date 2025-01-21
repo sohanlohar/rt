@@ -1,51 +1,260 @@
-import React from "react";
 import servicesSlide1 from "../../assets/images/services-slide1.jpg";
+import servicesSlide2 from "../../assets/images/services-slide2.jpeg";
+import servicesSlide3 from "../../assets/images/services-slide3.jpeg";
+import servicesSlide4 from "../../assets/images/services-slide4.jpeg";
+import servicesSlide5 from "../../assets/images/services-slide5.jpeg";
+import servicesSlide6 from "../../assets/images/services-slide6.jpeg";
+
+const slides = [
+  {
+    title: "Data Engineering",
+    description:
+      "Our data engineering services help you extract valuable insights, optimize operations, and make data-driven decisions.",
+    image: servicesSlide1,
+    bggredient:
+      "linear-gradient(90deg, #014D57 0%, rgba(1, 110, 124, 0.6) 100%)",
+    textDark: false,
+  },
+  {
+    title: "Software Development",
+    description:
+      "We Build custom software solutions that drive business growth. Our development team creates efficient, scalable applications tailored to your specific needs.",
+    image: servicesSlide2,
+    bggredient:
+      "linear-gradient(90deg, #F9F9F9 0%, rgba(210, 210, 210, 0.6) 100%)",
+    textDark: true,
+  },
+  {
+    title: "Mobile App & Website Development",
+    description:
+      "We Build custom software solutions that drive business growth. Our development team creates efficient, scalable applications tailored to your specific needs.",
+    image: servicesSlide3,
+    bggredient:
+      "linear-gradient(90deg, #FEC286 0%, rgba(255, 255, 255, 0.6) 100%)",
+    textDark: true,
+  },
+  {
+    title: "API Development",
+    description:
+      "Integrate seamlessly and unlock new opportunities. Our API development services enable data sharing, system interoperability, and efficient business processes.",
+    image: servicesSlide4,
+    bggredient:
+      "linear-gradient(90deg, #B5D0D3 0%, rgba(181, 208, 211, 0.6) 100%)",
+    textDark: true,
+  },
+  {
+    title: "UIUX Design",
+    description:
+      "We Create exceptional user experiences that boost customer satisfaction and loyalty. Our design expertise enhances brand perception and drives conversions.",
+    image: servicesSlide5,
+    bggredient:
+      "linear-gradient(90deg, #FFE4CB 0%, rgba(255, 255, 255, 0.6) 100%)",
+    textDark: true,
+  },
+  {
+    title: "Software Testing",
+    description:
+      "We are focused on Mitigating risks and ensuring product quality. Our comprehensive testing services help you deliver reliable software that meets user expectations.",
+    image: servicesSlide6,
+    bggredient:
+      "linear-gradient(90deg, #225A77 0%, rgba(34, 90, 119, 0.6) 100%)",
+    textDark: false,
+  },
+];
 
 const OurServicesSection = () => {
   return (
-    <section className="my-10">
+    <section className="my-10 mx-16">
       <div className="flex flex-col justify-center gap-3 items-center mb-14">
-        <h2 className="text-7xl font-archivo font-normal">Our Services</h2>
-        <p className="text-xl text-black font-archivo font-normal">
+        <h2 className="text-8xl pb-5 font-archivo font-normal">Our Services</h2>
+        <p className="text-2xl text-black font-karla py-5 font-normal">
           We deliver results. Our services are designed to simplify your
           business, improve efficiency, and keep you ahead
         </p>
       </div>
-      <div className="mt-6 flex flex-row justify-between gap-10">
-        <div className="w-1/3 flex flex-col justify-center gap-10 bg-gray px-5 py-10 border border-[#00000033] rounded-3xl">
-          <h4 className="text-3xl text-black font-archivo">
+      <div className="mt-6 flex flex-row justify-between gap-6">
+        <div className="w-1/3 flex flex-col justify-center bg-white px-10 py-16 border border-[#00000033] rounded-3xl">
+          <h4 className="text-[2rem] text-black font-archivo mb-5">
             We Deliver Results
           </h4>
-          <p>
-            At Ranav Technologies, we don&apos;t just offer services—we deliver
-            outcomes. Whether it&apos;s boosting efficiency, enhancing security,
-            or improving customer experiences, our solutions are designed to
-            create measurable impact. We help you achieve more with technology
-            that works as hard as you do.
+          <p className="text-xl leading-8 text-black font-light font-karla mb-5">
+            At Ranav Technologies, we don&apos;t just offer services—
+            <span className="text-primary font-medium">
+              we deliver outcomes
+            </span>
+            . Whether it&apos;s boosting efficiency, enhancing security, or
+            improving customer experiences, our solutions are designed to create{" "}
+            <span className="text-primary font-medium">measurable impact</span>.
+            We help you achieve more with technology that works as hard as you
+            do.
           </p>
           <button className="w-fit border border-primary text-primary rounded-full font-karla text-xl px-8 py-2">
             OUR PROCESS
           </button>
         </div>
-        <div
-          className="w-2/3 bg-primary bg-cover bg-center px-12 py-16 rounded-3xl text-white flex justify-between flex-col min-h-[450px]"
-          style={{
-            background: `linear-gradient(270deg, #014D57 0%, rgba(1, 110, 124, 0.6) 100%), url('${servicesSlide1.src}')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <h2 className="text-5xl text-white font-bold  font-archivo">
-            Data Engineering
-          </h2>
-          <p className="text-xl text-white font-light font-archivo">
-            Our data engineering services help you extract valuable insights,
-            optimize operations, and make data driven decisions.
-          </p>
-          <button className="w-fit border border-white text-white rounded-full font-karla text-xl px-8 py-2">
-            EXPLORE MORE
-          </button>
+
+        <div class="vertical-scroll-snap w-2/3">
+          {slides.map((slide, index) => {
+            return (
+              <div
+                className="stacking-slide relative !bg-cover !bg-center px-14 py-28 rounded-40 text-white flex justify-between flex-col min-h-[450px]"
+                style={{
+                  background: `${slide.bggredient}, url('${slide.image.src}')`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+                key={index}
+              >
+                <h2
+                  className={`text-6xl z-10  ${
+                    slide.textDark ? "text-black" : "text-white"
+                  }  font-bold  font-archivo`}
+                >
+                  {slide.title}
+                </h2>
+                <p
+                  className={`text-xl  z-10 ${
+                    slide.textDark ? "text-black" : "text-white"
+                  } font-light font-archivo`}
+                >
+                  {slide.description}
+                </p>
+                <button
+                  className={`w-fit  z-10 border ${
+                    slide.textDark
+                      ? "text-black border-black"
+                      : "text-white border-white"
+                  }   rounded-full font-karla text-xl px-8 py-2`}
+                >
+                  EXPLORE MORE
+                </button>
+              </div>
+            );
+          })}
         </div>
+
+        {/* <div class="vertical-scroll-snap w-2/3">
+          <div
+            className="stacking-slide relative bg-cover px-14 py-28 rounded-40 text-white flex justify-between flex-col min-h-[450px]"
+            style={{
+              background: `url('${servicesSlide1.src}')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <h2 className="text-6xl z-10 text-white font-bold  font-archivo">
+              Data Engineering
+            </h2>
+            <p className="text-xl  z-10 text-white font-light font-archivo">
+              Our data engineering services help you extract valuable insights,
+              optimize operations, and make data driven decisions.
+            </p>
+            <button className="w-fit  z-10 border border-white text-white rounded-full font-karla text-xl px-8 py-2">
+              EXPLORE MORE
+            </button>
+            <Image
+              className="absolute left-0 top-0 w-full h-full"
+              src={magicPattern}
+              alt="bg"
+            />
+          </div>
+          <div
+            className="stacking-slide relative bg-cover px-14 py-28 rounded-40 text-white flex justify-between flex-col min-h-[450px]"
+            style={{
+              background: `url('${servicesSlide1.src}')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <h2 className="text-6xl z-10 text-white font-bold  font-archivo">
+              Data Engineering
+            </h2>
+            <p className="text-xl  z-10 text-white font-light font-archivo">
+              Our data engineering services help you extract valuable insights,
+              optimize operations, and make data driven decisions.
+            </p>
+            <button className="w-fit  z-10 border border-white text-white rounded-full font-karla text-xl px-8 py-2">
+              EXPLORE MORE
+            </button>
+            <Image
+              className="absolute left-0 top-0 w-full h-full"
+              src={magicPattern}
+              alt="bg"
+            />
+          </div>
+          <div
+            className="stacking-slide relative bg-cover px-14 py-28 rounded-40 text-white flex justify-between flex-col min-h-[450px]"
+            style={{
+              background: `url('${servicesSlide1.src}')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <h2 className="text-6xl z-10 text-white font-bold  font-archivo">
+              Data Engineering
+            </h2>
+            <p className="text-xl  z-10 text-white font-light font-archivo">
+              Our data engineering services help you extract valuable insights,
+              optimize operations, and make data driven decisions.
+            </p>
+            <button className="w-fit  z-10 border border-white text-white rounded-full font-karla text-xl px-8 py-2">
+              EXPLORE MORE
+            </button>
+            <Image
+              className="absolute left-0 top-0 w-full h-full"
+              src={magicPattern}
+              alt="bg"
+            />
+          </div>
+          <div
+            className="stacking-slide relative bg-cover px-14 py-28 rounded-40 text-white flex justify-between flex-col min-h-[450px]"
+            style={{
+              background: `url('${servicesSlide1.src}')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <h2 className="text-6xl z-10 text-white font-bold  font-archivo">
+              Data Engineering
+            </h2>
+            <p className="text-xl  z-10 text-white font-light font-archivo">
+              Our data engineering services help you extract valuable insights,
+              optimize operations, and make data driven decisions.
+            </p>
+            <button className="w-fit  z-10 border border-white text-white rounded-full font-karla text-xl px-8 py-2">
+              EXPLORE MORE
+            </button>
+            <Image
+              className="absolute left-0 top-0 w-full h-full"
+              src={magicPattern}
+              alt="bg"
+            />
+          </div>
+          <div
+            className="stacking-slide relative bg-cover px-14 py-28 rounded-40 text-white flex justify-between flex-col min-h-[450px]"
+            style={{
+              background: `url('${servicesSlide1.src}')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <h2 className="text-6xl z-10 text-white font-bold  font-archivo">
+              Data Engineering
+            </h2>
+            <p className="text-xl  z-10 text-white font-light font-archivo">
+              Our data engineering services help you extract valuable insights,
+              optimize operations, and make data driven decisions.
+            </p>
+            <button className="w-fit  z-10 border border-white text-white rounded-full font-karla text-xl px-8 py-2">
+              EXPLORE MORE
+            </button>
+            <Image
+              className="absolute left-0 top-0 w-full h-full"
+              src={magicPattern}
+              alt="bg"
+            />
+          </div>
+        </div> */}
       </div>
     </section>
   );

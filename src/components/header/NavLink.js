@@ -9,7 +9,7 @@ const NavLink = ({ href, children }) => {
   return (
     <Link
       href={href}
-      className={`text-lg font-normal font-karla uppercase hover:text-primary ${
+      className={`text-xl font-normal font-karla uppercase hover:text-primary ${
         isActive ? "text-primary" : "text-gray-700"
       }`}
     >

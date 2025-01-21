@@ -10,66 +10,104 @@ import Image from "next/image";
 const AboutUsSection = () => {
   return (
     <section
-      className="relative my-10 px-12 py-14 rounded-3xl"
+      className="relative my-10 mx-7 px-20 pt-24 pb-10 rounded-3xl"
       style={{
         background: "linear-gradient(180deg, #E7EAEB 0%, #FFFFFF 100%)",
       }}
     >
       <div className="flex justify-between pb-10 items-end">
-        <h2 className="text-primary text-6xl font-archivo">About us</h2>
-        <button className="border border-primary text-primary rounded-full font-karla text-xl px-5 py-2">
+        <h2 className="text-primary-extraDark text-8xl font-archivo">
+          About us
+        </h2>
+        <button className="border border-primary-dark text-primary-dark rounded-full font-karla text-2xl px-8 py-2">
           READ MORE
         </button>
       </div>
-      <div className="flex gap-8">
-        <div className="w-2/3 relative">
+      <div className="flex gap-10 justify-between">
+        <div className="w-3/5 relative">
           <Image src={aboutUs} alt="about us" className="rounded-3xl" />
-          <div className="bg-white flex justify-between gap-1 flex-row w-2/5 absolute -bottom-10 right-20 rounded-10 p-5 shadow-0">
-            <div className="flex flex-col items-center text-center">
-              <Image src={iconSmile} alt="smile" />
-              <p className="text-[9px] font-karla">
-                Satisfied <br />
-                Clients
+          <div className="bg-white flex items-center px-5 justify-between gap-1 flex-row w-80 h-24 absolute -bottom-10 left-16 rounded-10 shadow-0">
+            <div className="group flex flex-col gap-1 items-center text-center cursor-pointer">
+              <div className="relative w-8 h-8 flex items-center justify-center rounded-full">
+                <div className="absolute inset-0 bg-orange-500 opacity-30 blur-lg rounded-full scale-0 transition-all duration-300 group-hover:scale-125"></div>
+                <Image
+                  src={iconSmile}
+                  alt="smile"
+                  width={40}
+                  height={40}
+                  className="relative z-10 transition-all duration-300 group-hover:scale-125"
+                />
+              </div>
+              <p className="text-[8.5px] leading-[10px] font-karla transition-all duration-300 group-hover:text-orange-500">
+                Satisfied <br /> Clients
               </p>
             </div>
-            <div className="flex flex-col items-center text-center">
-              <Image src={iconTimeline} alt="smile" />
-              <p className="text-[9px] font-karla">
-                Industry’s <br />
+            <div className="group flex flex-col gap-1 items-center text-center cursor-pointer">
+              <div className="relative w-8 h-8 flex items-center justify-center rounded-full">
+                <div className="absolute inset-0 bg-primary opacity-30 blur-lg rounded-full scale-0 transition-all duration-300 group-hover:scale-125"></div>
+                <Image
+                  src={iconTimeline}
+                  alt="smile"
+                  width={40}
+                  height={40}
+                  className="relative z-10 transition-all duration-300 group-hover:scale-125"
+                />
+              </div>
+              <p className="text-[8.5px] leading-[10px] font-karla transition-all duration-300 group-hover:text-primary">
+                Industry&apos;s <br />
                 best Skillset
               </p>
             </div>
-            <div className="flex flex-col items-center text-center">
-              <Image src={iconSetting} alt="smile" />
-              <p className="text-[9px] font-karla">
-                Solutions that <br />
-                Caters all
+            <div className="group flex flex-col gap-1 items-center text-center cursor-pointer">
+              <div className="relative w-8 h-8 flex items-center justify-center rounded-full">
+                <div className="absolute inset-0 bg-orange-500 opacity-30 blur-lg rounded-full scale-0 transition-all duration-300 group-hover:scale-125"></div>
+                <Image
+                  src={iconSetting}
+                  alt="smile"
+                  width={40}
+                  height={40}
+                  className="relative z-10 transition-all duration-300 group-hover:scale-125"
+                />
+              </div>
+              <p className="text-[8.5px] leading-[10px] font-karla transition-all duration-300 group-hover:text-orange-500">
+                Timeless <br />
+                Experience
               </p>
             </div>
-            <div className="flex flex-col items-center text-center">
-              <Image src={iconCode} alt="smile" />
-              <p className="text-[9px] font-karla">
+            <div className="group flex flex-col gap-1 items-center text-center cursor-pointer">
+              <div className="relative w-8 h-8 flex items-center justify-center rounded-full">
+                <div className="absolute inset-0 bg-primary opacity-30 blur-lg rounded-full scale-0 transition-all duration-300 group-hover:scale-125"></div>
+                <Image
+                  src={iconCode}
+                  alt="smile"
+                  width={40}
+                  height={40}
+                  className="relative z-10 transition-all duration-300 group-hover:scale-125"
+                />
+              </div>
+              <p className="text-[8.5px] leading-[10px] font-karla transition-all duration-300 group-hover:text-primary">
                 Timeless <br />
                 Experience
               </p>
             </div>
           </div>
         </div>
-        <p className="w-1/3 text-xl font-karla text-justify text-[#212121]">
+        <p className="w-2/5 text-xl font-normal font-karla text-justify text-black">
           At Ranav Technologies, we specialize in crafting innovative, custom
           tech solutions that empower businesses to thrive in a digital-first
           world. With a focus on efficiency and growth, we deliver cutting-edge
           technology designed to meet the unique challenges of modern
-          enterprises. Our team combines technical expertise with a deep
-          understanding of business needs, ensuring that every solution we
-          create is reliable, scalable, and impactful. From startups to
-          established corporations, we partner with our clients to drive success
-          through technology.
+          enterprises. <br />
+          <br />
+          Our team combines technical expertise with a deep understanding of
+          business needs, ensuring that every solution we create is reliable,
+          scalable, and impactful. From startups to established corporations, we
+          partner with our clients to drive success through technology.
         </p>
       </div>
       <Image
         src={aboutUsBg}
-        alt="nknk"
+        alt="about us background"
         className="absolute top-0 right-0 w-full h-full"
       />
     </section>

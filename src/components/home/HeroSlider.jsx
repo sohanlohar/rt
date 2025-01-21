@@ -3,6 +3,7 @@ import slide2Bg from "../../assets/images/slide2-bg.jpg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 const slidesData = [
   {
@@ -56,57 +57,67 @@ const HeroSlider = () => {
     arrows: false,
   };
   return (
-    <Slider {...settings}>
-      {slidesData.map((slide, index) => {
-        return (
-          <div className="slide-wrapper" key={index}>
-            <div
-              className="bg-primary bg-cover bg-center px-12 py-16 rounded-3xl text-white flex justify-between flex-col min-h-[550px]"
-              style={{
-                background: `linear-gradient(52.91deg, rgba(0, 38, 58, 0.8) 1.12%, rgba(2, 113, 126, 0.8) 79.96%), url('${slide.background.src}')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div className="border border-white text-white font-karla font-thin px-5 py-2 rounded-full w-64 text-center">
-                Explore . Execute . Elevate
-              </div>
-              <h1 className="text-6xl font-archivo max-w-3xl">
-                {slide.title.split(" ").map((word, i) => {
-                  const isSpecial = slide.specialWords.includes(word);
-                  return (
-                    <span key={i} className={isSpecial ? "text-gradient" : ""}>
-                      {word}{" "}
-                    </span>
-                  );
-                })}
-              </h1>
-              <div>
-                <div className="flex justify-between gap-10 items-end mb-7">
-                  <div className="flex gap-10">
-                    {slide.stats.map((stat, index) => {
-                      return (
-                        <p
-                          className="text-5xl text-white font-archivo flex flex-col"
-                          key={stat.value}
-                        >
-                          {stat.value}
-                          <span className="text-sm">{stat.label}</span>
-                        </p>
-                      );
-                    })}
+    <div className="mx-7">
+      <Slider {...settings}>
+        {slidesData.map((slide, index) => {
+          return (
+            <div className="slide-wrapper relative" key={index}>
+              <div
+                className="banner-slider bg-cover bg-center p-10 sm:p-10 md:p-16 lg:p-20 xl:p-28 !pb-10 rounded-40 text-white flex justify-between flex-col min-h-[800px]"
+                style={{
+                  background: `linear-gradient(52.91deg, rgba(0, 38, 58, 0.9) 1.12%, rgba(2, 113, 126, 0.9) 79.96%), url('${slide.background.src}')`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div className="border text-2xl opacity-80 leading-6 border-white text-white font-karla font-thin px-6 py-2 rounded-full w-fit text-center">
+                  Explore . Execute . Elevate
+                </div>
+                <h1 className="text-8xl font-archivo max-w-6xl">
+                  {slide.title.split(" ").map((word, i) => {
+                    const isSpecial = slide.specialWords.includes(word);
+                    return (
+                      <span
+                        key={i}
+                        className={isSpecial ? "text-gradient" : ""}
+                      >
+                        {word}{" "}
+                      </span>
+                    );
+                  })}
+                </h1>
+                <div>
+                  <div className="flex justify-between gap-40 items-end mb-10">
+                    <div className="flex gap-8">
+                      {slide.stats.map((stat, index) => {
+                        return (
+                          <p
+                            className="text-5xl font-normal text-white font-archivo flex flex-col"
+                            key={stat.value}
+                          >
+                            {stat.value}
+                            <span className="text-sm font-karla font-normal">{stat.label}</span>
+                          </p>
+                        );
+                      })}
+                    </div>
+                    <p className="text-xl font-karla">{slide.description}</p>
                   </div>
-                  <p className="text-xl font-karla">{slide.description}</p>
-                </div>
-                <div className="text-center border max-w-32 cursor-pointer text-sm uppercase rounded-full m-auto p-2">
-                  scroll
+                  <div className="text-center border max-w-32 cursor-pointer text-sm uppercase rounded-full m-auto p-2">
+                    scroll
+                  </div>
                 </div>
               </div>
+              {/* <Image
+                src={slide1Bg}
+                alt=""
+                className="absolute w-full h-full top-0 left-0 rounded-40"
+              /> */}
             </div>
-          </div>
-        );
-      })}
-    </Slider>
+          );
+        })}
+      </Slider>
+    </div>
   );
 };
 

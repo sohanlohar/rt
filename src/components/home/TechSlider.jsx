@@ -44,15 +44,21 @@ const slidesData = [
 
 const TechSlider = () => {
   const settings = {
-    dots: false,
+    cssEase: "linear",
+    centerMode: true,
+    rtl: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 2,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 3000,
     arrows: false,
+    dots: false,
+    pauseOnHover: false,
   };
   return (
-    <div className="py-10">
+    <div className="py-20">
       <Slider {...settings}>
         {slidesData.map((slide, index) => {
           return (
