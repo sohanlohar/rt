@@ -58,17 +58,23 @@ const slidesData = [
 
 const OurBlogSection = () => {
   const settings = {
-    dots: false,
+    cssEase: "linear",
+    centerMode: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 2000,
     arrows: false,
+    dots: false,
+    pauseOnHover: true,
+    variableWidth: true,
   };
   return (
-    <section className="my-16">
+    <section className="my-32">
       <div className="flex flex-col justify-center gap-3 items-center mb-14 max-w-screen-lg m-auto text-center">
-        <h2 className="text-7xl text-primary font-archivo font-normal">
+        <h2 className="text-8xl text-primary font-archivo font-normal">
           Our Blogs
         </h2>
       </div>
@@ -76,33 +82,44 @@ const OurBlogSection = () => {
         {slidesData.map((slide, index) => {
           return (
             <div className="slide-wrapper" key={index}>
-              <div
-                className="bg-primary m-3 bg-cover bg-center p-8 rounded-3xl text-white flex justify-between flex-col h-96"
-                style={{
-                  background: `linear-gradient(180deg, rgba(255, 255, 255, 0) 43.4%, rgba(255, 255, 255, 0.9) 100%), url('${slide.slideBg.src}')`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
-                <div className="self-end bg-white p-4 rounded-full">
-                  <Image
-                    src={arrowRightYellow}
-                    alt={slide.title}
-                    width={20}
-                    height={20}
-                  />
-                </div>
-                <div className="flex flex-row justify-between items-end">
-                  <div>
-                    <h4 className="text-2xl text-black font-karla font-extrabold">
-                      Title of Blog
-                    </h4>
-                    <p className="text-base text-black font-karla font-normal">
-                      10 JULY 2024
-                    </p>
+              <div className="group relative w-[500px] m-3 p-8 rounded-3xl text-white flex justify-between flex-col h-96 overflow-hidden">
+                <div
+                  className="absolute inset-0 transition-all duration-500"
+                  style={{
+                    background: `linear-gradient(180deg, rgba(255, 255, 255, 0) 43.4%, rgba(255, 255, 255, 0.9) 100%), url('${slide.slideBg.src}')`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                ></div>
+
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, rgba(246, 147, 49, 0.1) 43.4%, rgba(246, 147, 49, 0.6) 100%)",
+                  }}
+                ></div>
+
+                <div className="relative z-10 flex justify-between flex-col h-full">
+                  <div className="self-end bg-white group-hover:bg-secondary p-4 w-20 h-20 flex justify-center items-center rounded-full">
+                    <Image
+                      src={arrowRightYellow}
+                      alt={slide.title}
+                      width={20}
+                      height={20}
+                      className="transition-transform group-hover:brightness-0 group-hover:contrast-100 group-hover:invert duration-500 rotate-[0deg] group-hover:rotate-[-45deg] "
+                    />
                   </div>
-                  <div>
-                    <p className="bg-primary px-2 py-1 rounded-lg text-sm">
+                  <div className="flex flex-row justify-between items-end">
+                    <div>
+                      <h4 className="text-4xl text-black-dark font-karla font-extrabold mb-3">
+                        Title of Blog
+                      </h4>
+                      <p className="text-base text-black-dark font-karla font-normal">
+                        10 JULY 2024
+                      </p>
+                    </div>
+                    <p className="bg-[#225A77] px-4 leading-none py-2 text-white-light rounded-[13px] text-sm">
                       Machine learning
                     </p>
                   </div>

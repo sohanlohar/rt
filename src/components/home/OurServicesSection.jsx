@@ -93,7 +93,7 @@ const OurServicesSection = () => {
           </button>
         </div>
 
-        <div class="vertical-scroll-snap w-2/3">
+        <div className="vertical-scroll-snap w-2/3">
           {slides.map((slide, index) => {
             return (
               <div
@@ -132,129 +132,6 @@ const OurServicesSection = () => {
             );
           })}
         </div>
-
-        {/* <div class="vertical-scroll-snap w-2/3">
-          <div
-            className="stacking-slide relative bg-cover px-14 py-28 rounded-40 text-white flex justify-between flex-col min-h-[450px]"
-            style={{
-              background: `url('${servicesSlide1.src}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <h2 className="text-6xl z-10 text-white font-bold  font-archivo">
-              Data Engineering
-            </h2>
-            <p className="text-xl  z-10 text-white font-light font-archivo">
-              Our data engineering services help you extract valuable insights,
-              optimize operations, and make data driven decisions.
-            </p>
-            <button className="w-fit  z-10 border border-white text-white rounded-full font-karla text-xl px-8 py-2">
-              EXPLORE MORE
-            </button>
-            <Image
-              className="absolute left-0 top-0 w-full h-full"
-              src={magicPattern}
-              alt="bg"
-            />
-          </div>
-          <div
-            className="stacking-slide relative bg-cover px-14 py-28 rounded-40 text-white flex justify-between flex-col min-h-[450px]"
-            style={{
-              background: `url('${servicesSlide1.src}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <h2 className="text-6xl z-10 text-white font-bold  font-archivo">
-              Data Engineering
-            </h2>
-            <p className="text-xl  z-10 text-white font-light font-archivo">
-              Our data engineering services help you extract valuable insights,
-              optimize operations, and make data driven decisions.
-            </p>
-            <button className="w-fit  z-10 border border-white text-white rounded-full font-karla text-xl px-8 py-2">
-              EXPLORE MORE
-            </button>
-            <Image
-              className="absolute left-0 top-0 w-full h-full"
-              src={magicPattern}
-              alt="bg"
-            />
-          </div>
-          <div
-            className="stacking-slide relative bg-cover px-14 py-28 rounded-40 text-white flex justify-between flex-col min-h-[450px]"
-            style={{
-              background: `url('${servicesSlide1.src}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <h2 className="text-6xl z-10 text-white font-bold  font-archivo">
-              Data Engineering
-            </h2>
-            <p className="text-xl  z-10 text-white font-light font-archivo">
-              Our data engineering services help you extract valuable insights,
-              optimize operations, and make data driven decisions.
-            </p>
-            <button className="w-fit  z-10 border border-white text-white rounded-full font-karla text-xl px-8 py-2">
-              EXPLORE MORE
-            </button>
-            <Image
-              className="absolute left-0 top-0 w-full h-full"
-              src={magicPattern}
-              alt="bg"
-            />
-          </div>
-          <div
-            className="stacking-slide relative bg-cover px-14 py-28 rounded-40 text-white flex justify-between flex-col min-h-[450px]"
-            style={{
-              background: `url('${servicesSlide1.src}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <h2 className="text-6xl z-10 text-white font-bold  font-archivo">
-              Data Engineering
-            </h2>
-            <p className="text-xl  z-10 text-white font-light font-archivo">
-              Our data engineering services help you extract valuable insights,
-              optimize operations, and make data driven decisions.
-            </p>
-            <button className="w-fit  z-10 border border-white text-white rounded-full font-karla text-xl px-8 py-2">
-              EXPLORE MORE
-            </button>
-            <Image
-              className="absolute left-0 top-0 w-full h-full"
-              src={magicPattern}
-              alt="bg"
-            />
-          </div>
-          <div
-            className="stacking-slide relative bg-cover px-14 py-28 rounded-40 text-white flex justify-between flex-col min-h-[450px]"
-            style={{
-              background: `url('${servicesSlide1.src}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <h2 className="text-6xl z-10 text-white font-bold  font-archivo">
-              Data Engineering
-            </h2>
-            <p className="text-xl  z-10 text-white font-light font-archivo">
-              Our data engineering services help you extract valuable insights,
-              optimize operations, and make data driven decisions.
-            </p>
-            <button className="w-fit  z-10 border border-white text-white rounded-full font-karla text-xl px-8 py-2">
-              EXPLORE MORE
-            </button>
-            <Image
-              className="absolute left-0 top-0 w-full h-full"
-              src={magicPattern}
-              alt="bg"
-            />
-          </div>
-        </div> */}
       </div>
     </section>
   );

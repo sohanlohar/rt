@@ -23,22 +23,23 @@ module.exports = {
         },
         white: {
           DEFAULT: "#F9F9F9",
-          light: "#F9F9F9",
+          light: "#ffffff",
           dark: "#B20000",
         },
         gray: {
           DEFAULT: "#EDF4F4",
           light: "#EDF4F4",
-          dark: "#B20000",
+          dark: "#0C0819",
         },
         black: {
           DEFAULT: "#212121",
+          dark: "#000000",
         },
       },
       fontFamily: {
-        karla: ["Karla", "sans-serif"],
-        archivo: ["Archivo", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"],
+        karla: ["var(--font-karla)", "sans-serif"],
+        archivo: ["var(--font-archivo)", "sans-serif"],
+        poppins: ["var(--font-poppins)", "sans-serif"],
       },
       boxShadow: {
         0: "0px 4px 50px 0px #00000040",

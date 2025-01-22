@@ -52,10 +52,11 @@ const TestimonialOne = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
-    speed: 3000,
+    speed: 2000,
     arrows: false,
     dots: false,
     pauseOnHover: true,
+    variableWidth: true,
   };
   const settings2 = {
     cssEase: "linear",
@@ -65,18 +66,19 @@ const TestimonialOne = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
-    speed: 4500,
+    speed: 3500,
     arrows: false,
     dots: false,
     pauseOnHover: true,
+    variableWidth: true,
   };
   return (
     <div className="py-10">
       <Slider {...settings}>
         {slidesData.map((slide, index) => {
           return (
-            <div className="slide-wrapper w-[600px]" key={index}>
-              <div className="flex gap-5 flex-col justify-center bg-white px-5 py-10 m-3 border border-[#00000033] rounded-3xl">
+            <div className="slide-wrapper" key={index}>
+              <div className="flex gap-5 flex-col w-[550px] justify-center bg-white px-8 py-10 m-3 border border-[#00000033] rounded-3xl">
                 <div className="flex items-center gap-5">
                   <div className="w-10 h-10 rounded-full">
                     <Image
@@ -86,15 +88,15 @@ const TestimonialOne = () => {
                     />
                   </div>
                   <div>
-                    <p className="text-lg text-[#0C0819] font-poppins font-extrabold leading-tight">
+                    <p className="text-lg text-gray-dark font-extrabold leading-tight">
                       Ultrasound MD
                     </p>
-                    <p className="text-lg text-[#F69331] font-poppins font-medium leading-tight">
+                    <p className="text-lg text-[#F69331] font-medium leading-tight">
                       Marketing Coordinator
                     </p>
                   </div>
                 </div>
-                <p className="text-base text-[#0C0819] font-poppins font-normal">
+                <p className="text-base text-gray-dark font-medium">
                   Ask CDCR San Quintin State Prison 2008. We installed Purex
                   dispensers throughout the prison to combat diseases…and it was
                   a Roaring Success (as in Roaring Drunk)
@@ -108,7 +110,7 @@ const TestimonialOne = () => {
         {slidesData.map((slide, index) => {
           return (
             <div className="slide-wrapper" key={index}>
-              <div className="flex gap-5 flex-col justify-center bg-white px-5 py-10 m-3 border border-[#00000033] rounded-3xl">
+              <div className="flex gap-5 flex-col w-[550px] justify-center bg-white px-5 py-10 m-3 border border-[#00000033] rounded-3xl">
                 <div className="flex items-center gap-5">
                   <div className="w-10 h-10 rounded-full">
                     <Image
@@ -118,15 +120,15 @@ const TestimonialOne = () => {
                     />
                   </div>
                   <div>
-                    <p className="text-lg text-[#0C0819] font-poppins font-extrabold leading-tight">
+                    <p className="text-lg text-[#0C0819] font-extrabold leading-tight">
                       Ultrasound MD
                     </p>
-                    <p className="text-lg text-[#F69331] font-poppins font-medium leading-tight">
+                    <p className="text-lg text-[#F69331] font-medium leading-tight">
                       Marketing Coordinator
                     </p>
                   </div>
                 </div>
-                <p className="text-base text-[#0C0819] font-poppins font-normal">
+                <p className="text-base text-[#0C0819] font-medium">
                   Ask CDCR San Quintin State Prison 2008. We installed Purex
                   dispensers throughout the prison to combat diseases…and it was
                   a Roaring Success (as in Roaring Drunk)
