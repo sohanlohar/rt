@@ -36,7 +36,7 @@ const ContactSection = () => {
   });
 
   return (
-    <section className="flex flex-row gap-10 justify-between px-14 py-20 my-16 ml-16 bg-[#01263B] p-10 rounded-l-3xl">
+    <section className="flex flex-row gap-10 justify-between px-14 py-20 my-16 ml-16 sm:flex-row bg-[#01263B] p-10 rounded-l-3xl">
       <div className="w-1/3 relative flex gap-10 flex-col">
         <h3 className="text-7xl text-white font-karla font-light uppercase leading-none">
           Looking for a tech partner?

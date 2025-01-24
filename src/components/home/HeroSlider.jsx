@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 
+const normalArr = ["Narendra", "Lohar", "Bhadwa"];
+
 const slidesData = [
   {
     background: slide1Bg,
@@ -63,17 +65,17 @@ const HeroSlider = () => {
           return (
             <div className="slide-wrapper relative" key={index}>
               <div
-                className="banner-slider bg-cover bg-center p-10 sm:p-10 md:p-16 lg:p-20 xl:p-28 !pb-10 rounded-40 text-white flex justify-between flex-col min-h-[800px]"
+                className="banner-slider bg-cover bg-center p-6 sm:p-10 md:p-16 lg:p-20 xl:p-28 !pb-6 sm:!pb-10 rounded-40 text-white flex justify-between flex-col h-[512px] md:min-h-[800px]"
                 style={{
                   background: `linear-gradient(52.91deg, rgba(0, 38, 58, 0.9) 1.12%, rgba(2, 113, 126, 0.9) 79.96%), url('${slide.background.src}')`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
               >
-                <div className="border text-2xl opacity-80 leading-6 border-white text-white font-karla font-thin px-6 py-2 rounded-full w-fit text-center">
+                <div className="border text-[10px] sm:text-xs md:text-2xl opacity-80 leading-5 sm:leading-6 border-white text-white font-karla font-thin px-4 sm:px-6 py-1 rounded-full w-fit text-center">
                   Explore . Execute . Elevate
                 </div>
-                <h1 className="text-8xl font-archivo max-w-6xl">
+                <h1 className="text-4xl md:text-8xl font-normal font-archivo max-w-6xl">
                   {slide.title.split(" ").map((word, i) => {
                     const isSpecial = slide.specialWords.includes(word);
                     return (
@@ -87,27 +89,32 @@ const HeroSlider = () => {
                   })}
                 </h1>
                 <div>
-                  <div className="flex justify-between gap-40 items-end mb-10">
-                    <div className="flex gap-8">
+                  <div className="flex justify-between flex-col-reverse md:flex-row gap-10 sm:gap-20 md:gap-40 md:items-end mb-6 sm:mb-10">
+                    <div className="flex gap-2 justify-between sm:gap-8">
                       {slide.stats.map((stat, index) => {
                         return (
                           <p
-                            className="text-5xl font-normal text-white font-archivo flex flex-col"
+                            className="text-2xl md:text-5xl leading-none font-normal text-white font-archivo flex flex-col"
                             key={stat.value}
                           >
                             {stat.value}
-                            <span className="text-sm font-karla font-normal">{stat.label}</span>
+                            <span className="text-[8px] sm:text-sm font-karla font-normal">
+                              {stat.label}
+                            </span>
                           </p>
                         );
                       })}
                     </div>
-                    <p className="text-xl font-karla">{slide.description}</p>
+                    <p className="text-xs sm:text-xl font-karla">
+                      {slide.description}
+                    </p>
                   </div>
-                  <div className="text-center border max-w-32 cursor-pointer text-sm uppercase rounded-full m-auto p-2">
+                  <div className="hidden md:block text-center border max-w-32 cursor-pointer text-sm uppercase rounded-full m-auto p-2">
                     scroll
                   </div>
                 </div>
               </div>
+
               {/* <Image
                 src={slide1Bg}
                 alt=""

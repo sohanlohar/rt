@@ -55,6 +55,7 @@ module.exports = {
         10: "10px",
         100: "100px",
         40: "40px",
+        30: "30px",
       },
       backgroundImage: {
         "gradient-custom":

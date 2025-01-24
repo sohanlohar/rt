@@ -64,20 +64,20 @@ const slides = [
 
 const OurServicesSection = () => {
   return (
-    <section className="my-10 mx-16">
-      <div className="flex flex-col justify-center gap-3 items-center mb-14">
-        <h2 className="text-8xl pb-5 font-archivo font-normal">Our Services</h2>
-        <p className="text-2xl text-black font-karla py-5 font-normal">
+    <section className="my-10 mx-7 md:mx-16">
+      <div className="flex flex-col justify-center gap-3 items-center mb-5 md:mb-14">
+        <h2 className="section-heading-h2">Our Services</h2>
+        <p className="text-sm md:text-2xl text-black font-karla py-2 md:py-5 font-normal">
           We deliver results. Our services are designed to simplify your
           business, improve efficiency, and keep you ahead
         </p>
       </div>
-      <div className="mt-6 flex flex-row justify-between gap-6">
-        <div className="w-1/3 flex flex-col justify-center bg-white px-10 py-16 border border-[#00000033] rounded-3xl">
-          <h4 className="text-[2rem] text-black font-archivo mb-5">
+      <div className="mt-6 flex flex-col-reverse md:flex-row justify-between gap-6">
+        <div className="w-full md:w-1/3 flex flex-col justify-center md:bg-white md:px-10 md:py-16 md:border border-[#00000033] md:rounded-3xl">
+          <h4 className="text-2xl md:text-[2rem] text-black font-archivo mb-5">
             We Deliver Results
           </h4>
-          <p className="text-xl leading-8 text-black font-light font-karla mb-5">
+          <p className="text-sm md:text-xl leading-5 md:leading-8 text-black font-light font-karla mb-5">
             At Ranav Technologies, we don&apos;t just offer services—
             <span className="text-primary font-medium">
               we deliver outcomes
@@ -88,16 +88,16 @@ const OurServicesSection = () => {
             We help you achieve more with technology that works as hard as you
             do.
           </p>
-          <button className="w-fit border border-primary text-primary rounded-full font-karla text-xl px-8 py-2">
+          <button className="w-fit border border-primary text-primary rounded-full font-karla text-sm md:text-xl px-8 py-2">
             OUR PROCESS
           </button>
         </div>
 
-        <div className="vertical-scroll-snap w-2/3">
+        <div className="vertical-scroll-snap w-full md:w-2/3">
           {slides.map((slide, index) => {
             return (
               <div
-                className="stacking-slide relative !bg-cover !bg-center px-14 py-28 rounded-40 text-white flex justify-between flex-col min-h-[450px]"
+                className="stacking-slide relative !bg-cover !bg-center px-8 md:px-14 py-10 md:py-28 rounded-xl md:rounded-40 text-white flex justify-between flex-col h-[260px] md:h-[450px]"
                 style={{
                   background: `${slide.bggredient}, url('${slide.image.src}')`,
                   backgroundSize: "cover",
@@ -106,25 +106,25 @@ const OurServicesSection = () => {
                 key={index}
               >
                 <h2
-                  className={`text-6xl z-10  ${
+                  className={`text-xl md:text-6xl z-10  ${
                     slide.textDark ? "text-black" : "text-white"
                   }  font-bold  font-archivo`}
                 >
                   {slide.title}
                 </h2>
                 <p
-                  className={`text-xl  z-10 ${
+                  className={`text-sm md:text-xl z-10 ${
                     slide.textDark ? "text-black" : "text-white"
-                  } font-light font-archivo`}
+                  } font-light font-karla`}
                 >
                   {slide.description}
                 </p>
                 <button
-                  className={`w-fit  z-10 border ${
+                  className={`w-fit z-10 border ${
                     slide.textDark
                       ? "text-black border-black"
                       : "text-white border-white"
-                  }   rounded-full font-karla text-xl px-8 py-2`}
+                  }   rounded-full font-karla text-sm md:text-xl px-8 py-2`}
                 >
                   EXPLORE MORE
                 </button>

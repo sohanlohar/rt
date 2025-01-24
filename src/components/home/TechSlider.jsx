@@ -56,9 +56,23 @@ const TechSlider = () => {
     arrows: false,
     dots: false,
     pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
   return (
-    <div className="py-20">
+    <div className="py-8 md:py-20">
       <Slider {...settings}>
         {slidesData.map((slide, index) => {
           return (

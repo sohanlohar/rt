@@ -13,7 +13,10 @@ const Header = () => {
 
   return (
     <>
-      <nav className="bg-white w-85 z-50 shadow-0 mx-auto h-20 my-8 rounded-xl border  border-[#00000033] flex justify-between items-center px-4 sm:px-6 lg:px-8">
+      <nav
+        className="w-85 z-50 mx-auto flex justify-between items-center md:px-4 sm:px-6 lg:px-8 
+  md:h-20 my-6 md:my-8 md:rounded-xl md:border md:border-[#00000033] md:bg-white md:shadow-0"
+      >
         <div className="flex-shrink-0 w-[150px]">
           <Link href="/" className="text-xl font-bold text-gray-800">
             <Image src={RTlogo} alt="RT Logo" />
@@ -27,11 +30,9 @@ const Header = () => {
           <NavLink href="/career">CAREER</NavLink>
           <NavLink href="/blog">BLOG</NavLink>
         </div>
-        <div className="">
+
+        <div className="hidden md:block">
           <button className="btn-primary">Contact US</button>
-          {/* <button className="inline-flex items-center font-normal font-karla text-lg bg-amber-500 border-0 py-2 px-4 text-white rounded-lg uppercase">
-            Contact US
-          </button> */}
         </div>
 
         <div className="md:hidden">

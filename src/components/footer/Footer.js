@@ -21,12 +21,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="mb-16">
-      <div className="max-w-90 mx-auto bg-gray rounded-xl p-4 sm:p-6 lg:p-8">
-       
+    <footer className="my-10 md:my-16">
+      <div className="max-w-90 mx-auto bg-gray rounded-40 p-4 sm:p-6 lg:p-8">
         <div className="flex flex-col gap-5">
-          <div className="flex gap-8 items-end">
-            <div className="w-2/5 p-5">
+          <div className="flex flex-col md:flex-row gap-8 items-start md:items-end">
+            <div className="w-full md:w-2/5 p-5">
               <div className="w-[250px] h-[70px]">
                 <Image
                   alt="RT Logo"
@@ -44,11 +43,11 @@ const Footer = () => {
                 digital landscape.
               </p>
             </div>
-            <div className="w-3/5 p-5">
-              <h4 className="font-semibold mb-5 text-3xl uppercase font-karla text-black-dark">
+            <div className="w-full md:w-3/5 p-5">
+              <h4 className="font-semibold mb-5  text-2xl md:text-3xl uppercase font-karla text-black-dark">
                 Pages
               </h4>
-              <ul className="list-none flex items-center text-xl gap-4 font-karla text-black">
+              <ul className="list-none flex items-center flex-wrap text-sm md:text-xl gap-4 font-karla text-black">
                 <li>About</li>
                 <li>Services</li>
                 <li>Portfolio</li>
@@ -60,22 +59,22 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex gap-8 items-end">
-            <div className="w-2/5 p-5">
-              <h4 className="font-bold text-black mb-5 text-2xl font-karla">
+          <div className="flex flex-col-reverse md:flex-row gap-8 items-start md:items-end">
+            <div className="w-full md:w-2/5 p-5">
+              <h4 className="font-bold text-black mb-5 text-[18px] md:text-2xl font-karla">
                 ranavtechnologies@support.com
               </h4>
-              <div className="flex gap-2 justify-between text-sm font-karla font-normal">
+              <div className="flex gap-2 justify-between flex-wrap text-sm font-karla font-normal">
                 <p>© 2024 RANAV TECHNOLOGIES</p>
                 <p>Privacy Policy</p>
                 <p>Terms & Conditions</p>
               </div>
             </div>
-            <div className="w-3/5 p-5">
-              <h4 className="font-semibold mb-5 text-3xl uppercase font-karla text-black-dark">
+            <div className="w-full md:w-3/5 p-5">
+              <h4 className="font-semibold mb-5 text-2xl md:text-3xl uppercase font-karla text-black-dark">
                 SOCIALS
               </h4>
-              <ul className="flex flex-wrap justify-between gap-10">
+              <ul className="flex flex-wrap justify-between gap-5 md:gap-10">
                 {socialIcons.map((icon) => {
                   return (
                     <li key={icon.iconName}>
