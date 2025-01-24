@@ -15,9 +15,9 @@ export default function Home() {
       <TechSlider />
       <OurServicesSection />
       <ProjectsSection />
-      {/* <TestimonialOne />
+      <TestimonialOne />
       <OurBlogSection />
-      <ContactSection /> */}
+      <ContactSection />
     </>
   );
 }
