@@ -97,7 +97,7 @@ const OurServicesSection = () => {
           {slides.map((slide, index) => {
             return (
               <div
-                className="stacking-slide relative !bg-cover !bg-center px-8 md:px-14 py-10 md:py-28 rounded-xl md:rounded-40 text-white flex justify-between flex-col h-[260px] md:h-[450px]"
+                className="stacking-slide relative !bg-cover !bg-center px-8 md:px-14 py-10 md:py-28 rounded-xl md:rounded-40 text-white flex justify-between flex-col h-[260px] md:h-[550px]"
                 style={{
                   background: `${slide.bggredient}, url('${slide.image.src}')`,
                   backgroundSize: "cover",
