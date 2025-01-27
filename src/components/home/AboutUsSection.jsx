@@ -98,7 +98,7 @@ const AboutUsSection = () => {
           <Image
             src={aboutUs}
             alt="about us"
-            className="w-full h-[full] rounded-30"
+            className="w-full h-full rounded-30"
           />
           <div className="bg-white flex items-center px-5 justify-between gap-1 flex-row w-80 h-24 absolute -bottom-10 left-16 rounded-10 shadow-0">
             <div className="group flex flex-col gap-1 items-center text-center cursor-pointer">
@@ -166,7 +166,7 @@ const AboutUsSection = () => {
             </div>
           </div>
         </div>
-        <p className="w-full md:w-2/5 text-sm leading-5 md:leading-10 md:text-xl font-normal font-karla text-justify text-black">
+        <p className="w-full md:w-2/5 text-sm leading-4 md:leading-8 md:text-xl font-normal font-karla text-justify text-black">
           At Ranav Technologies, we specialize in crafting innovative, custom
           tech solutions that empower businesses to thrive in a digital-first
           world. With a focus on efficiency and growth, we deliver cutting-edge

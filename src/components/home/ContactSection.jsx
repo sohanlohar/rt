@@ -36,16 +36,16 @@ const ContactSection = () => {
   });
 
   return (
-    <section className="flex flex-row gap-10 justify-between px-14 py-20 my-16 ml-16 sm:flex-row bg-[#01263B] p-10 rounded-l-3xl">
-      <div className="w-1/3 relative flex gap-10 flex-col">
-        <h3 className="text-7xl text-white font-karla font-light uppercase leading-none">
+    <section className="flex flex-col md:flex-row gap-10 justify-between px-8 md:px-14 py-10 md:py-20 my-16 ml-5 md:ml-16 sm:flex-row bg-[#01263B] p-10 rounded-l-3xl">
+      <div className="w-full md:w-1/3 relative flex gap-10 flex-col">
+        <h3 className="text-4xl md:text-7xl text-white font-karla font-light uppercase leading-none">
           Looking for a tech partner?
         </h3>
-        <p className="text-3xl text-white font-karla font-light text-justify leading-relaxed">
+        <p className="text-3xl text-white font-karla font-light text-justify leading-relaxed hidden md:block">
           Get in touch with us today. Our team is ready to discuss how we can
           support your business with tailored solutions that meet your goals.
         </p>
-        <div className="w-full h-full">
+        <div className="w-full h-full hidden md:block">
           <Image
             src={horizentalArrow}
             alt="Arrow contact us"
@@ -53,11 +53,11 @@ const ContactSection = () => {
           />
         </div>
       </div>
-      <div className="bg-white rounded-40 p-10 w-[750px]">
+      <div className="bg-white rounded-40 px-5 md:px-10 py-8 md:py-10 w-full md:w-[750px]">
         <form onSubmit={formik.handleSubmit} className="">
-          <div className="flex flex-row gap-5 justify-between">
+          <div className="flex flex-col md:flex-row gap-0 md:gap-5 justify-between">
             <div className="flex flex-col mb-3 w-full">
-              <label className="text-lg font-karla font-medium mb-1">
+              <label className="text-sm md:text-lg font-karla font-medium mb-1">
                 *First Name
               </label>
               <input
@@ -66,7 +66,7 @@ const ContactSection = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.firstName}
-                className="border border-black rounded-full p-5"
+                className="border border-black rounded-full p-3 md:p-5"
               />
               {formik.touched.firstName && formik.errors.firstName ? (
                 <div className="text-red-500 text-xs">
@@ -75,7 +75,7 @@ const ContactSection = () => {
               ) : null}
             </div>
             <div className="flex flex-col mb-3 w-full">
-              <label className="text-lg font-karla font-medium mb-1">
+              <label className="text-sm md:text-lg font-karla font-medium mb-1">
                 *Last Name
               </label>
               <input
@@ -84,7 +84,7 @@ const ContactSection = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.lastName}
-                className="border border-black rounded-full p-5"
+                className="border border-black rounded-full p-3 md:p-5"
               />
               {formik.touched.lastName && formik.errors.lastName ? (
                 <div className="text-red-500 text-xs">
@@ -94,7 +94,7 @@ const ContactSection = () => {
             </div>
           </div>
           <div className="flex flex-col mb-5">
-            <label className="text-lg font-karla font-medium mb-1">
+            <label className="text-sm md:text-lg font-karla font-medium mb-1">
               *Email Address
             </label>
             <input
@@ -103,7 +103,7 @@ const ContactSection = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.email}
-              className="border border-black rounded-full p-5"
+              className="border border-black rounded-full p-3 md:p-5"
             />
             {formik.touched.email && formik.errors.email ? (
               <div className="text-red-500 text-xs">{formik.errors.email}</div>
@@ -111,13 +111,12 @@ const ContactSection = () => {
           </div>
 
           <div className="flex flex-col mb-2">
-            {/* <label className="text-lg font-karla font-medium">Message</label> */}
             <textarea
               name="message"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.message}
-              className="border border-black rounded-40 p-5"
+              className="border border-black rounded-30 md:rounded-40 p-5"
               rows={5}
             />
             {formik.touched.message && formik.errors.message ? (
@@ -129,12 +128,16 @@ const ContactSection = () => {
 
           <button
             type="submit"
-            className="bg-secondary text-3xl uppercase leading-none text-white p-2 mt-4 w-full rounded-full py-5 hover:bg-primary-dark font-karla"
+            className="bg-secondary text-2xl md:text-3xl uppercase leading-none text-white p-1 md:p-2 mt-4 w-full rounded-full py-3 md:py-5 hover:bg-primary-dark font-karla"
           >
             Submit
           </button>
         </form>
       </div>
+      <p className="text-base text-white font-karla font-light text-justify leading-5 block md:hidden">
+        Get in touch with us today. Our team is ready to discuss how we can
+        support your business with tailored solutions that meet your goals.
+      </p>
     </section>
   );
 };

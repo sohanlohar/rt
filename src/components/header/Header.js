@@ -24,7 +24,7 @@ const Header = () => {
         </div>
 
         <div className="hidden md:flex gap-10">
-          <NavLink href="/about-us">About Us</NavLink>
+          <NavLink href="/about">About Us</NavLink>
           <NavLink href="/services">Services</NavLink>
           <NavLink href="/portfolio">PORTFOLIO</NavLink>
           <NavLink href="/career">CAREER</NavLink>
