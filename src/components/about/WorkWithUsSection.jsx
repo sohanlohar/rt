@@ -6,6 +6,33 @@ import futureReadyIcon from "../../assets/icons/future-ready-icon.png";
 import tailoredIcon from "../../assets/icons/tailored-icon.png";
 import Image from "next/image";
 
+const workWithUsData = [
+  {
+    title: "Tailored Solutions",
+    description:
+      "We don’t believe in one-size-fits-all. Every project is custom-built to fit your unique business needs.",
+    imageUrl: tailoredIcon,
+  },
+  {
+    title: "Future-Ready Technology",
+    description:
+      "We deliver scalable solutions that grow with your business and adapt to the future.",
+    imageUrl: futureReadyIcon,
+  },
+  {
+    title: "Collaboration at the Core",
+    description:
+      "We work with you, not for you. Your input shapes everything we do.",
+    imageUrl: collaborationIcon,
+  },
+  {
+    title: "Personal Commitment",
+    description:
+      "Our team is here for you at every step of the way, from the first meeting to long after the project is complete.",
+    imageUrl: personalIcon,
+  },
+];
+
 const WorkWithUsSection = () => {
   return (
     <section
@@ -26,70 +53,25 @@ const WorkWithUsSection = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-5 mt-14 mb-20">
-        <div className="flex items-center gap-8">
-          <Image
-            src={collaborationIcon}
-            alt="about us background"
-            className="w-20 h-20"
-          />
-          <div>
-            <h5 className="text-lg font-karla text-black-dark font-bold">
-              Tailored Solutions:
-            </h5>
-            <p className="text-lg font-karla text-black-dark font-normal leading-6">
-              We don’t believe in one-size-fits-all. Every project is
-              custom-built to fit your unique business needs.
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center gap-8">
-          <Image
-            src={collaborationIcon}
-            alt="about us background"
-            className="w-20 h-20"
-          />
-          <div>
-            <h5 className="text-lg font-karla text-black-dark font-bold">
-              Tailored Solutions:
-            </h5>
-            <p className="text-lg font-karla text-black-dark font-normal leading-6 leading-6">
-              We don’t believe in one-size-fits-all. Every project is
-              custom-built to fit your unique business needs.
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center gap-8">
-          <Image
-            src={collaborationIcon}
-            alt="about us background"
-            className="w-20 h-20"
-          />
-          <div>
-            <h5 className="text-lg font-karla text-black-dark font-bold">
-              Tailored Solutions:
-            </h5>
-            <p className="text-lg font-karla text-black-dark font-normal leading-6">
-              We don’t believe in one-size-fits-all. Every project is
-              custom-built to fit your unique business needs.
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center gap-8">
-          <Image
-            src={collaborationIcon}
-            alt="about us background"
-            className="w-20 h-20"
-          />
-          <div>
-            <h5 className="text-lg font-karla text-black-dark font-bold">
-              Tailored Solutions:
-            </h5>
-            <p className="text-lg font-karla text-black-dark font-normal leading-6">
-              We don’t believe in one-size-fits-all. Every project is
-              custom-built to fit your unique business needs.
-            </p>
-          </div>
-        </div>
+        {workWithUsData.map((item, index) => {
+          return (
+            <div className="flex items-center gap-8" key={index}>
+              <Image
+                src={item.imageUrl}
+                alt="about us background"
+                className="w-20 h-20"
+              />
+              <div>
+                <h5 className="text-lg font-karla text-black-dark font-bold">
+                  {item.title}:
+                </h5>
+                <p className="text-lg font-karla text-black-dark font-normal leading-6">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          );
+        })}
       </div>
       <div className="mt-10 flex justify-between items-center text-4xl font-archivo font-bold">
         <button className="btn-primary rounded-40">Contact Us</button>
