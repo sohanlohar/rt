@@ -6,9 +6,22 @@
   .btn-primary {
     @apply py-2 px-4 bg-secondary text-white font-normal font-karla text-lg rounded-10 uppercase shadow-md hover:bg-primary focus:outline-none focus:ring focus:bg-primary focus:ring-opacity-75;
   }
-  .section-heading-h2 {
-    @apply text-4xl md:text-8xl font-archivo font-normal;
+  .heading-h1 {
+    @apply text-4xl md:text-7xl font-archivo font-semibold;
   }
+  .heading-h2 {
+    @apply text-3xl md:text-6xl font-archivo font-semibold;
+  }
+  .heading-h3 {
+    @apply text-2xl md:text-5xl font-archivo font-semibold;
+  }
+  .heading-h4 {
+    @apply text-2xl md:text-4xl font-archivo font-semibold;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -36,17 +49,18 @@ body {
   color: transparent;
 }
 
-.slick-track {
+.teck-slider .slick-track {
   align-items: center;
   display: flex !important;
 }
+
 /* ==================== */
 
 .vertical-scroll-snap {
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
   scroll-snap-type: y proximity;
-  max-height: 85vh;
+  max-height: 80vh;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -57,7 +71,7 @@ body {
 
 .stacking-slide {
   scroll-snap-align: start;
-  height: 85vh;
+  height: 80vh;
   width: 100%;
   position: sticky;
   top: 0;

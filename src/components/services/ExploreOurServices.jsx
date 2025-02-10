@@ -48,7 +48,7 @@ const ExploreServices = [
 
 const ExploreOurServices = () => {
   return (
-    <section className="mx-16 mt-24">
+    <section className="mt-24">
       <div className="mb-10">
         <h2 className="text-6xl font-archivo text-center font-normal text-black-dark">
           Explore Our Services

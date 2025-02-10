@@ -66,11 +66,21 @@ const OurProcess = () => {
               key={index}
             >
               <div className="w-1/3"></div>
-              <div className="w-2/3 bg-[#EFEFEF] p-6 rounded-tl-full rounded-bl-full px-11 py-12">
+              <div
+                className={`w-2/3 bg-[#EFEFEF] ${
+                  index % 2 == 0
+                    ? "rounded-tl-full rounded-bl-full"
+                    : "rounded-tr-full rounded-br-full"
+                } px-10 py-9`}
+              >
                 <div className="flex gap-10 items-center">
                   <div>
-                    <div className="w-36 h-36 flex items-center justify-center relative border-[2.1px] border-dashed border-black rounded-full">
-                      <div className="w-28 h-28 flex items-center justify-center border-[20px] border-red-500 rounded-full">
+                    <div
+                      className={`w-36 h-36 flex items-center justify-center relative border-[2.1px] border-dashed border-black rounded-full`}
+                    >
+                      <div
+                        className={`w-28 h-28 flex items-center justify-center border-[20px] ${index % 2 == 0 ? "border-primary":"border-secondary-Orange"} rounded-full`}
+                      >
                         <Image
                           src={item.imageUrl}
                           alt="about us background"
@@ -80,7 +90,11 @@ const OurProcess = () => {
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-4xl text-[#026F7C] font-archivo font-bold mb-6">
+                    <h4
+                      className={`text-4xl ${
+                        index % 2 == 0 ? "text-[#026F7C]" : "text-secondary-Orange"
+                      }  font-archivo font-bold mb-6`}
+                    >
                       {item.title}
                     </h4>
                     <p className="text-xl font-karla font-light text-[#222222]">

@@ -6,7 +6,7 @@ const ServicesHero = () => {
   return (
     <>
       <section className="relative my-9 mb-20">
-        <div className="mx-5 md:mx-14 rounded-40">
+        <div className="rounded-40">
           <div
             className="p-44 w-full h-96 md:h-[650px] rounded-40 bg-cover bg-center bg-no-repeat relative z-10 flex justify-center"
             style={{ backgroundImage: `url(${servicesBg.src})` }}
@@ -26,7 +26,7 @@ const ServicesHero = () => {
           </div>
         </div>
       </section>
-      <p className="mx-24 text-xl font-karla text-justify leading-10 text-black-dark mb-6">
+      <p className="text-xl font-karla text-justify leading-10 text-black-dark mb-6">
         We’re committed to providing tailored solutions designed to empower
         businesses in today’s competitive digital landscape. Our expertise spans
         a diverse range of services that allow us to support every stage of your
@@ -35,7 +35,7 @@ const ServicesHero = () => {
         transform ideas into reality and ensure seamless operation and growth
         for your business.
       </p>
-      <p className="mx-24 text-xl font-karla text-justify leading-10 text-black">
+      <p className="text-xl font-karla text-justify leading-10 text-black">
         We combines technical expertise with industry knowledge to deliver
         services that help our clients stay ahead. Let us work with you to build
         the future of your business with technology that drives real results.

@@ -72,18 +72,20 @@ const TechSlider = () => {
     ],
   };
   return (
-    <div className="py-8 md:py-20">
-      <Slider {...settings}>
-        {slidesData.map((slide, index) => {
-          return (
-            <div className="slide-wrapper" key={index}>
-              <div className="flex justify-center text-center">
-                <Image src={slide.logoUri} alt={slide.title} />
+    <div className="teck-slider relative left-1/2 -translate-x-1/2 w-[98vw] !overflow-hidden mb-28">
+      <div className="max-w-full overflow-hidden">
+        <Slider {...settings}>
+          {slidesData.map((slide, index) => {
+            return (
+              <div className="slide-wrapper w-full" key={index}>
+                <div className="flex justify-center text-center">
+                  <Image src={slide.logoUri} alt={slide.title} />
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </Slider>
+            );
+          })}
+        </Slider>
+      </div>
     </div>
   );
 };

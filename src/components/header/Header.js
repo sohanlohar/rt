@@ -14,11 +14,10 @@ const Header = () => {
   return (
     <>
       <nav
-        className="w-85 z-50 mx-auto flex justify-between items-center md:px-4 sm:px-6 lg:px-8 
-  md:h-20 my-6 md:my-8 md:rounded-xl md:border md:border-[#00000033] md:bg-white md:shadow-0"
+        className="w-85 z-50 mx-auto flex justify-between items-center md:px-4 sm:px-6 lg:px-8 md:h-20 my-6 md:rounded-xl md:border md:border-[#00000033] md:bg-white md:shadow-0"
       >
         <div className="flex-shrink-0 w-[150px]">
-          <Link href="/" className="text-xl font-bold text-gray-800">
+          <Link href="/">
             <Image src={RTlogo} alt="RT Logo" />
           </Link>
         </div>

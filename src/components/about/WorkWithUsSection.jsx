@@ -36,7 +36,7 @@ const workWithUsData = [
 const WorkWithUsSection = () => {
   return (
     <section
-      className="rounded-40 mx-14 my-28 px-14 pt-20 pb-16"
+      className="rounded-40 my-28 px-14 pt-20 pb-16"
       style={{ backgroundImage: `url(${workWithBg.src})` }}
     >
       <div className="flex gap-14 mb-16">

@@ -3,7 +3,7 @@ import React from "react";
 const MissionVisionSection = () => {
   return (
     <>
-      <section className="mx-16">
+      <section className="">
         <div className="flex items-center gap-28 bg-[#7FABB0] bg-gradient-to-l from-[#7FABB0] to-white/80 p-16 rounded-40 my-10">
           <h2 className="w-2/5 text-8xl font-archivo font-normal text-black">
             Our <br />

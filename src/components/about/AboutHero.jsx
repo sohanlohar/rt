@@ -7,7 +7,7 @@ const AboutHero = () => {
   return (
     <>
       <section className="relative my-10">
-        <div className="mx-5 md:mx-14 rounded-40">
+        <div className="rounded-40">
           <div
             className="p-12 w-full h-96 md:h-[650px] rounded-40 bg-cover bg-center bg-no-repeat relative z-10 flex justify-center"
             style={{ backgroundImage: `url(${heroAboutUs.src})` }}
@@ -35,14 +35,14 @@ const AboutHero = () => {
           className="absolute top-0 w-full h-full z-0"
         />
       </section>
-      <p className="mx-24 text-2xl font-karla text-justify leading-normal text-black mb-6">
+      <p className="text-2xl font-karla text-justify leading-normal text-black mb-6">
         At Ranav Technologies, we believe that technology should work for
         people, not the other way around. We exist to make the complex
         simple—using innovative solutions to solve your biggest challenges. Our
         passion lies in creating custom technology that not only meets your
         business needs but helps you unlock new opportunities for growth.
       </p>
-      <p className="mx-24 text-2xl font-karla text-justify leading-normal text-black">
+      <p className="text-2xl font-karla text-justify leading-normal text-black">
         Behind every line of code, every design, and every solution we create is
         a dedicated team of professionals who care about your success. We
         partner with businesses to develop tailored solutions—from powerful apps

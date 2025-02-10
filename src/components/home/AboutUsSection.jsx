@@ -6,94 +6,27 @@ import iconTimeline from "../../assets/icons/icon-timeline.png";
 import iconSetting from "../../assets/icons/icon-setting.png";
 import iconCode from "../../assets/icons/icon-code.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const AboutUsSection = () => {
   return (
     <section
-      className="relative my-10 mx-7 px-4 md:px-20 py-4 md:pt-24 pb-10 rounded-40"
+      id="target-section"
+      className="relative mb-28 px-4 md:px-20 py-4 md:pt-24 pb-10 rounded-40"
       style={{
         background: "linear-gradient(180deg, #E7EAEB 0%, #FFFFFF 100%)",
       }}
     >
-      <div className="relative h-[300px] block md:hidden mb-8">
-        <Image
-          src={aboutUs}
-          alt="about us"
-          className="w-full h-full rounded-30 "
-        />
-        <div className="bg-white flex items-center px-5 justify-between gap-1 flex-row w-56 h-20 absolute top-4 left-4 rounded-10 shadow-0">
-          <div className="group flex flex-col gap-1 items-center text-center cursor-pointer">
-            <div className="relative w-8 h-8 flex items-center justify-center rounded-full">
-              <div className="absolute inset-0 bg-orange-500 opacity-30 blur-lg rounded-full scale-0 transition-all duration-300 group-hover:scale-125"></div>
-              <Image
-                src={iconSmile}
-                alt="smile"
-                width={40}
-                height={40}
-                className="relative z-10 transition-all duration-300 group-hover:scale-125"
-              />
-            </div>
-            <p className="text-[8.5px] leading-[10px] font-karla transition-all duration-300 group-hover:text-orange-500">
-              Satisfied <br /> Clients
-            </p>
-          </div>
-          <div className="group flex flex-col gap-1 items-center text-center cursor-pointer">
-            <div className="relative w-8 h-8 flex items-center justify-center rounded-full">
-              <div className="absolute inset-0 bg-primary opacity-30 blur-lg rounded-full scale-0 transition-all duration-300 group-hover:scale-125"></div>
-              <Image
-                src={iconTimeline}
-                alt="smile"
-                width={40}
-                height={40}
-                className="relative z-10 transition-all duration-300 group-hover:scale-125"
-              />
-            </div>
-            <p className="text-[8.5px] leading-[10px] font-karla transition-all duration-300 group-hover:text-primary">
-              Industry&apos;s <br />
-              best Skillset
-            </p>
-          </div>
-          <div className="group flex flex-col gap-1 items-center text-center cursor-pointer">
-            <div className="relative w-8 h-8 flex items-center justify-center rounded-full">
-              <div className="absolute inset-0 bg-orange-500 opacity-30 blur-lg rounded-full scale-0 transition-all duration-300 group-hover:scale-125"></div>
-              <Image
-                src={iconSetting}
-                alt="smile"
-                width={40}
-                height={40}
-                className="relative z-10 transition-all duration-300 group-hover:scale-125"
-              />
-            </div>
-            <p className="text-[8.5px] leading-[10px] font-karla transition-all duration-300 group-hover:text-orange-500">
-              Timeless <br />
-              Experience
-            </p>
-          </div>
-          <div className="group flex flex-col gap-1 items-center text-center cursor-pointer">
-            <div className="relative w-8 h-8 flex items-center justify-center rounded-full">
-              <div className="absolute inset-0 bg-primary opacity-30 blur-lg rounded-full scale-0 transition-all duration-300 group-hover:scale-125"></div>
-              <Image
-                src={iconCode}
-                alt="smile"
-                width={40}
-                height={40}
-                className="relative z-10 transition-all duration-300 group-hover:scale-125"
-              />
-            </div>
-            <p className="text-[8.5px] leading-[10px] font-karla transition-all duration-300 group-hover:text-primary">
-              Timeless <br />
-              Experience
-            </p>
-          </div>
-        </div>
-      </div>
       <div className="flex justify-between flex-row pb-5 md:pb-10 items-end">
-        <h2 className="text-primary-extraDark section-heading-h2">About us</h2>
-        <button className="border border-primary-dark text-primary-dark rounded-full font-karla text-base md:text-2xl px-4 md:px-8 py-2">
+        <h2 className="text-primary-extraDark heading-h2 z-10">About us</h2>
+        <Link
+          href="/"
+          className="border z-10 border-primary-dark text-primary-dark rounded-full font-karla text-base md:text-xl px-4 md:px-8 py-2"
+        >
           READ MORE
-        </button>
+        </Link>
       </div>
-      <div className="flex flex-col md:flex-row gap-10 justify-between">
+      <div className="flex flex-col md:flex-row gap-10 justify-between z-10">
         <div className="w-full md:w-3/5 relative hidden md:block">
           <Image
             src={aboutUs}

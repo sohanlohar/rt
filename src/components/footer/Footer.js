@@ -22,7 +22,7 @@ const Footer = () => {
 
   return (
     <footer className="my-10 md:my-16">
-      <div className="max-w-90 mx-auto bg-gray rounded-40 p-4 sm:p-6 lg:p-8">
+      <div className="mx-auto bg-gray rounded-40 p-4 sm:p-6 lg:p-8">
         <div className="flex flex-col gap-5">
           <div className="flex flex-col md:flex-row gap-8 items-start md:items-end">
             <div className="w-full md:w-2/5 p-5">
@@ -44,14 +44,14 @@ const Footer = () => {
               </p>
             </div>
             <div className="w-full md:w-3/5 p-5">
-              <h4 className="font-semibold mb-5  text-2xl md:text-3xl uppercase font-karla text-black-dark">
-                Pages
+              <h4 className="font-bold mb-5  text-xl md:text-2xl uppercase font-karla text-black-dark">
+                Quick Links
               </h4>
               <ul className="list-none flex items-center flex-wrap text-sm md:text-xl gap-4 font-karla text-black">
                 <li>About</li>
                 <li>Services</li>
                 <li>Portfolio</li>
-                <li>Case Studies</li>
+                {/* <li>Case Studies</li> */}
                 <li>Career</li>
                 <li>Blogs</li>
                 <li>Contact Us</li>
@@ -61,8 +61,8 @@ const Footer = () => {
 
           <div className="flex flex-col-reverse md:flex-row gap-8 items-start md:items-end">
             <div className="w-full md:w-2/5 p-5">
-              <h4 className="font-bold text-black mb-5 text-[18px] md:text-2xl font-karla">
-                ranavtechnologies@support.com
+              <h4 className="font-bold text-black mb-5 text-base md:text-xl font-karla">
+                support@ranavtechnologies.com
               </h4>
               <div className="flex gap-2 justify-between flex-wrap text-sm font-karla font-normal">
                 <p>© 2024 RANAV TECHNOLOGIES</p>
@@ -71,7 +71,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="w-full md:w-3/5 p-5">
-              <h4 className="font-semibold mb-5 text-2xl md:text-3xl uppercase font-karla text-black-dark">
+              <h4 className="font-bold mb-5 text-xl md:text-2xl uppercase font-karla text-black-dark">
                 SOCIALS
               </h4>
               <ul className="flex flex-wrap justify-between gap-5 md:gap-10">

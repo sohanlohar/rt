@@ -21,7 +21,7 @@ const poppins = Poppins({
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className="">
+    <div className="container mx-auto">
       <Header />
       <div
         className={`${karla.variable} ${archivo.variable} ${poppins.variable}`}

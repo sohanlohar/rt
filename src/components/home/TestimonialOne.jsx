@@ -136,7 +136,7 @@ const TestimonialOne = () => {
     ],
   };
   return (
-    <div className="py-10">
+    <div className="mb-28">
       <Slider {...settings}>
         {slidesData.map((slide, index) => {
           return (

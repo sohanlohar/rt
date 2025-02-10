@@ -46,9 +46,9 @@ const ourApproach = [
 
 const ApproachSection = () => {
   return (
-    <div className="mx-24 my-16">
+    <div className="my-16">
       <div className="mb-20">
-        <h2 className="section-heading-h2 mb-10">Our Approach</h2>
+        <h2 className="heading-h2 mb-10">Our Approach</h2>
         <p className="text-xl font-karla font-normal leading-10">
           At Ranav Technologies, we believe that every business is unique, and
           so are its challenges. That’s why we take the time to understand your
@@ -59,7 +59,6 @@ const ApproachSection = () => {
       </div>
       <div className="">
         {ourApproach.map((item, index) => {
-          console.log("🚀 ~ item:", item)
           return (
             <div
               className={`flex gap-28 items-center my-10 ${
