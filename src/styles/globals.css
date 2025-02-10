@@ -23,7 +23,6 @@
 html {
   scroll-behavior: smooth;
 }
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -37,6 +36,7 @@ html {
 } */
 
 body {
+  overflow-x: hidden;
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-karla), sans-serif;

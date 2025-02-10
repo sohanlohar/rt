@@ -72,7 +72,7 @@ const OurBlogSection = () => {
     variableWidth: true,
   };
   return (
-    <section className="mb-16 md:mb-28">
+    <section className="relative left-[51%] -translate-x-[51%] w-[100vw] !overflow-hidden mb-16 md:mb-28">
       <div className="flex flex-col justify-center gap-3 items-center mb-5 md:mb-14 max-w-screen-lg m-auto text-center">
         <h2 className="heading-h2 text-primary">Our Blogs</h2>
       </div>

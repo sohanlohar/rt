@@ -72,7 +72,7 @@ const TechSlider = () => {
     ],
   };
   return (
-    <div className="teck-slider relative left-1/2 -translate-x-1/2 w-[98vw] !overflow-hidden mb-28">
+    <div className="teck-slider relative left-1/2 -translate-x-1/2 w-[100vw] !overflow-hidden mb-28">
       <div className="max-w-full overflow-hidden">
         <Slider {...settings}>
           {slidesData.map((slide, index) => {

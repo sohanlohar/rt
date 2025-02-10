@@ -86,8 +86,8 @@ const TestimonialOne = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0,
-    speed: 2000,
+    autoplaySpeed: 50,
+    speed: 5000,
     arrows: false,
     dots: false,
     pauseOnHover: true,
@@ -114,12 +114,13 @@ const TestimonialOne = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0,
-    speed: 3500,
+    autoplaySpeed: 50,
+    speed: 8000,
     arrows: false,
     dots: false,
     pauseOnHover: true,
     variableWidth: true,
+    rtl: true, 
     responsive: [
       {
         breakpoint: 991,
@@ -136,7 +137,7 @@ const TestimonialOne = () => {
     ],
   };
   return (
-    <div className="mb-28">
+    <div className="relative left-1/2 -translate-x-1/2 w-[100vw] !overflow-hidden mb-28">
       <Slider {...settings}>
         {slidesData.map((slide, index) => {
           return (
