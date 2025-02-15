@@ -21,14 +21,14 @@ const poppins = Poppins({
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className="container mx-auto">
+    <>
       <Header />
-      <div
+      <main
         className={`${karla.variable} ${archivo.variable} ${poppins.variable}`}
       >
         <Component {...pageProps} />
-      </div>
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }

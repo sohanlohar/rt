@@ -72,21 +72,19 @@ const TechSlider = () => {
     ],
   };
   return (
-    <div className="teck-slider relative left-1/2 -translate-x-1/2 w-[100vw] !overflow-hidden mb-28">
-      <div className="max-w-full overflow-hidden">
-        <Slider {...settings}>
-          {slidesData.map((slide, index) => {
-            return (
-              <div className="slide-wrapper w-full" key={index}>
-                <div className="flex justify-center text-center">
-                  <Image src={slide.logoUri} alt={slide.title} />
-                </div>
+    <section className="teck-slider mb-28">
+      <Slider {...settings}>
+        {slidesData.map((slide, index) => {
+          return (
+            <div className="slide-wrapper w-full" key={slide.title}>
+              <div className="flex justify-center text-center">
+                <Image src={slide.logoUri} alt={slide.title} />
               </div>
-            );
-          })}
-        </Slider>
-      </div>
-    </div>
+            </div>
+          );
+        })}
+      </Slider>
+    </section>
   );
 };
 

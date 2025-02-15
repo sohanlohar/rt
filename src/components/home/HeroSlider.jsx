@@ -57,11 +57,11 @@ const HeroSlider = () => {
     arrows: false,
   };
   return (
-    <div className="mb-20">
+    <section className="mb-20 container">
       <Slider {...settings}>
         {slidesData.map((slide, index) => {
           return (
-            <div className="slide-wrapper relative" key={index}>
+            <div className="slide-wrapper relative" key={slide.title}>
               <div
                 className="banner-slider h-[calc(100vh-130px)] bg-cover bg-center p-6 sm:p-8 md:p-10 lg:p-12 xl:p-12 !pb-6 sm:!pb-10 rounded-40 text-white flex justify-between flex-col"
                 style={{
@@ -124,7 +124,7 @@ const HeroSlider = () => {
           );
         })}
       </Slider>
-    </div>
+    </section>
   );
 };
 

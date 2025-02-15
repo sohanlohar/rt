@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <>
+    <header className="container">
       <nav
         className="w-85 z-50 mx-auto flex justify-between items-center md:px-4 sm:px-6 lg:px-8 md:h-20 my-6 md:rounded-xl md:border md:border-[#00000033] md:bg-white md:shadow-0"
       >
@@ -84,7 +84,7 @@ const Header = () => {
           </div>
         )}
       </nav>
-    </>
+    </header>
   );
 };
 

@@ -42,8 +42,8 @@ const processData = [
 
 const OurProcess = () => {
   return (
-    <>
-      <section className="mx-16 mt-24">
+    <section>
+      <div className="mx-16 mt-24">
         <div className="mb-10 mx-auto max-w-6xl text-center">
           <h2 className="text-6xl font-archivo text-center font-normal text-black-dark mb-5">
             Our Process
@@ -55,15 +55,15 @@ const OurProcess = () => {
             your solution efficient and impactful.
           </p>
         </div>
-      </section>
-      <section>
+      </div>
+      <div>
         {processData.map((item, index) => {
           return (
             <div
               className={`flex ${
                 index % 2 == 0 ? "flex-row" : "flex-row-reverse"
               } my-20`}
-              key={index}
+              key={item.title}
             >
               <div className="w-1/3"></div>
               <div
@@ -79,7 +79,11 @@ const OurProcess = () => {
                       className={`w-36 h-36 flex items-center justify-center relative border-[2.1px] border-dashed border-black rounded-full`}
                     >
                       <div
-                        className={`w-28 h-28 flex items-center justify-center border-[20px] ${index % 2 == 0 ? "border-primary":"border-secondary-Orange"} rounded-full`}
+                        className={`w-28 h-28 flex items-center justify-center border-[20px] ${
+                          index % 2 == 0
+                            ? "border-primary"
+                            : "border-secondary-Orange"
+                        } rounded-full`}
                       >
                         <Image
                           src={item.imageUrl}
@@ -92,7 +96,9 @@ const OurProcess = () => {
                   <div>
                     <h4
                       className={`text-4xl ${
-                        index % 2 == 0 ? "text-[#026F7C]" : "text-secondary-Orange"
+                        index % 2 == 0
+                          ? "text-[#026F7C]"
+                          : "text-secondary-Orange"
                       }  font-archivo font-bold mb-6`}
                     >
                       {item.title}
@@ -106,8 +112,8 @@ const OurProcess = () => {
             </div>
           );
         })}
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

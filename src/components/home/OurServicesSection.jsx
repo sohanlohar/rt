@@ -64,7 +64,7 @@ const slides = [
 
 const OurServicesSection = () => {
   return (
-    <section className="mb-28">
+    <section className="container mb-28">
       <div className="flex flex-col justify-center gap-3 items-center mb-5 md:mb-14">
         <h2 className="heading-h2">Our Services</h2>
         <p className="text-sm md:text-xl text-black font-karla py-2 md:py-5 font-normal">

@@ -21,7 +21,7 @@ const validationSchema = Yup.object({
     .required("Message is required"),
 });
 
-const ContactSection = () => {
+const ContactServices = () => {
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -37,22 +37,24 @@ const ContactSection = () => {
 
   return (
     <section className="relative">
-      <div className="container flex flex-col md:flex-row gap-10 justify-between pl-8 md:pl-14 py-10 md:py-20 my-16 sm:flex-row">
+      <div className="container flex flex-col md:flex-row gap-10 justify-between pr-8 md:pr-14 py-10 md:py-20 my-16 sm:flex-row">
         <div className="w-full md:w-1/3 relative flex gap-10 flex-col">
           <h3 className="text-3xl md:text-6xl text-white font-karla font-normal uppercase leading-none">
-            Looking for a tech partner?
+            Get Your Custom Quote
           </h3>
           <p className="text-3xl text-white font-karla font-light text-justify leading-normal hidden md:block">
-            Get in touch with us today. Our team is ready to discuss how we can
-            support your business with tailored solutions that meet your goals.
+            Tell us what you’re looking for, and we’ll craft a tailored solution
+            just for you. Our team is ready to dive into your project needs,
+            budget, and timeline to bring your vision to life. Fill out the
+            form, and let’s make it happen together!
           </p>
-          <div className="w-full h-full hidden md:block">
+          {/* <div className="w-full h-full hidden md:block">
             <Image
               src={horizentalArrow}
               alt="Arrow contact us"
               className="absolute left-[-120px]"
             />
-          </div>
+          </div> */}
         </div>
         <div className="bg-white rounded-40 px-5 md:px-10 py-8 md:py-10 w-full md:w-[750px]">
           <form onSubmit={formik.handleSubmit} className="">
@@ -151,13 +153,15 @@ const ContactSection = () => {
           </form>
         </div>
         <p className="text-base text-white font-karla font-light text-justify leading-5 block md:hidden">
-          Get in touch with us today. Our team is ready to discuss how we can
-          support your business with tailored solutions that meet your goals.
+          Tell us what you’re looking for, and we’ll craft a tailored solution
+          just for you. Our team is ready to dive into your project needs,
+          budget, and timeline to bring your vision to life. Fill out the form,
+          and let’s make it happen together!
         </p>
       </div>
-      <div className="bg-[#01263B] absolute left-0 top-0 w-full h-full -z-10 ml-16 rounded-l-3xl"></div>
+      <div className="bg-[#014D57] absolute right-0 top-0 w-full h-full -z-10 mr-16 rounded-r-3xl"></div>
     </section>
   );
 };
 
-export default ContactSection;
+export default ContactServices;

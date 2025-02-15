@@ -1,16 +1,8 @@
-import React from "react";
-import Amazon_Web from "../../assets/icons/Amazon_Web.png";
-import HTML5_logo from "../../assets/icons/HTML5_logo.png";
-import python from "../../assets/icons/python.png";
-import Google from "../../assets/icons/Google.png";
-import postgresql from "../../assets/icons/postgresql.png";
-import profileImage from "../../assets/images/profile-image.jpg";
-import NodeJS from "../../assets/icons/Nodejs.png";
-import reactLogo from "../../assets/icons/react-logo.png";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import profileImage from "../../assets/images/profile-image.jpg";
 
 const slidesData = [
   {
@@ -137,11 +129,11 @@ const TestimonialOne = () => {
     ],
   };
   return (
-    <div className="relative left-1/2 -translate-x-1/2 w-[100vw] !overflow-hidden mb-28">
+    <section className="mb-28">
       <Slider {...settings}>
         {slidesData.map((slide, index) => {
           return (
-            <div className="slide-wrapper" key={index}>
+            <div className="slide-wrapper" key={slide.reviewwerName}>
               <div className="flex gap-3 md:gap-5 flex-col w-80 md:w-[550px] justify-center bg-white px-4 md:px-8 py-5 md:py-10 m-3 border border-[#00000033] rounded-3xl">
                 <div className="flex items-center gap-5">
                   <div className="w-10 h-10 rounded-full">
@@ -171,7 +163,7 @@ const TestimonialOne = () => {
       <Slider {...settings2}>
         {slidesData.map((slide, index) => {
           return (
-            <div className="slide-wrapper" key={index}>
+            <div className="slide-wrapper" key={slide.reviewwerName}>
               <div className="flex gap-3 md:gap-5 flex-col w-80 md:w-[550px] justify-center bg-white  px-4 md:px-8 py-5 md:py-10 m-3 border border-[#00000033] rounded-3xl">
                 <div className="flex items-center gap-5">
                   <div className="w-10 h-10 rounded-full">
@@ -198,7 +190,7 @@ const TestimonialOne = () => {
           );
         })}
       </Slider>
-    </div>
+    </section>
   );
 };
 

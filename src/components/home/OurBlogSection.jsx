@@ -72,14 +72,14 @@ const OurBlogSection = () => {
     variableWidth: true,
   };
   return (
-    <section className="relative left-[51%] -translate-x-[51%] w-[100vw] !overflow-hidden mb-16 md:mb-28">
+    <section className="mb-16 md:mb-28">
       <div className="flex flex-col justify-center gap-3 items-center mb-5 md:mb-14 max-w-screen-lg m-auto text-center">
         <h2 className="heading-h2 text-primary">Our Blogs</h2>
       </div>
       <Slider {...settings}>
         {slidesData.map((slide, index) => {
           return (
-            <div className="slide-wrapper" key={index}>
+            <div className="slide-wrapper" key={slide.title}>
               <div className="group relative w-80 md:w-[500px] m-3 p-4 md:p-8 rounded-3xl text-white flex justify-between flex-col h-48 md:h-96 overflow-hidden">
                 <div
                   className="absolute inset-0 transition-all duration-500"

@@ -6,8 +6,8 @@ import heroAboutUs from "../../assets/images/hero-about-us.jpeg";
 const AboutHero = () => {
   return (
     <>
-      <section className="relative my-10">
-        <div className="rounded-40">
+      <section className="relative mb-16">
+        <div className="container">
           <div
             className="p-12 w-full h-96 md:h-[650px] rounded-40 bg-cover bg-center bg-no-repeat relative z-10 flex justify-center"
             style={{ backgroundImage: `url(${heroAboutUs.src})` }}
@@ -28,28 +28,30 @@ const AboutHero = () => {
               }}
             />
           </div>
+          <Image
+            src={aboutUsBg}
+            alt="about us background"
+            className="absolute left-0 top-0 w-full h-full"
+          />
         </div>
-        <Image
-          src={aboutUsBg}
-          alt="about us background"
-          className="absolute top-0 w-full h-full z-0"
-        />
       </section>
-      <p className="text-2xl font-karla text-justify leading-normal text-black mb-6">
-        At Ranav Technologies, we believe that technology should work for
-        people, not the other way around. We exist to make the complex
-        simple—using innovative solutions to solve your biggest challenges. Our
-        passion lies in creating custom technology that not only meets your
-        business needs but helps you unlock new opportunities for growth.
-      </p>
-      <p className="text-2xl font-karla text-justify leading-normal text-black">
-        Behind every line of code, every design, and every solution we create is
-        a dedicated team of professionals who care about your success. We
-        partner with businesses to develop tailored solutions—from powerful apps
-        to seamless integrations—that push the boundaries of what’s possible.
-        Our clients trust us because we take the time to understand their vision
-        and work hand-in-hand to turn that vision into reality.
-      </p>
+      <section className="mb-24 container">
+        <p className="text-2xl font-karla text-justify leading-normal text-black mb-6">
+          At Ranav Technologies, we believe that technology should work for
+          people, not the other way around. We exist to make the complex
+          simple—using innovative solutions to solve your biggest challenges.
+          Our passion lies in creating custom technology that not only meets
+          your business needs but helps you unlock new opportunities for growth.
+        </p>
+        <p className="text-2xl font-karla text-justify leading-normal text-black">
+          Behind every line of code, every design, and every solution we create
+          is a dedicated team of professionals who care about your success. We
+          partner with businesses to develop tailored solutions—from powerful
+          apps to seamless integrations—that push the boundaries of what’s
+          possible. Our clients trust us because we take the time to understand
+          their vision and work hand-in-hand to turn that vision into reality.
+        </p>
+      </section>
     </>
   );
 };

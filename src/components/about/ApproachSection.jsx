@@ -46,7 +46,7 @@ const ourApproach = [
 
 const ApproachSection = () => {
   return (
-    <div className="my-16">
+    <section className="container my-16">
       <div className="mb-20">
         <h2 className="heading-h2 mb-10">Our Approach</h2>
         <p className="text-xl font-karla font-normal leading-10">
@@ -81,7 +81,7 @@ const ApproachSection = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 

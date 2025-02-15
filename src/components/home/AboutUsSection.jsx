@@ -12,7 +12,7 @@ const AboutUsSection = () => {
   return (
     <section
       id="target-section"
-      className="relative mb-28 px-4 md:px-20 py-4 md:pt-24 pb-10 rounded-40"
+      className="container relative mb-28 px-4 md:px-20 py-4 md:pt-24 pb-10 rounded-40"
       style={{
         background: "linear-gradient(180deg, #E7EAEB 0%, #FFFFFF 100%)",
       }}

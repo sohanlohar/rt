@@ -6,7 +6,7 @@ import React from "react";
 
 const ProjectsSection = () => {
   return (
-    <section className="mb-16 md:mb-24">
+    <section className="container mb-16 md:mb-24">
       <div className="flex flex-col justify-center gap-3 w-full md:w-3/4 items-center mb-5 md:mb-14 max-w-screen-lg m-auto text-center">
         <h2 className="text-primary heading-h2">Our Projects</h2>
         <p className="text-sm md:text-xl text-black font-karla font-normal mb-5">

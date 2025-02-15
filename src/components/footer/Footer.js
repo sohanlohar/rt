@@ -21,7 +21,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="my-10 md:my-16">
+    <footer className="container my-10 md:my-16">
       <div className="mx-auto bg-gray rounded-40 p-4 sm:p-6 lg:p-8">
         <div className="flex flex-col gap-5">
           <div className="flex flex-col md:flex-row gap-8 items-start md:items-end">
