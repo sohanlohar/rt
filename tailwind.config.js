@@ -1,12 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./pages/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      container: {
+        center: true,
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -20,6 +19,7 @@ module.exports = {
           DEFAULT: "#F69331",
           light: "#F7B079",
           dark: "#C65F16",
+          Orange: "#F69332",
         },
         white: {
           DEFAULT: "#F9F9F9",
@@ -56,6 +56,9 @@ module.exports = {
         100: "100px",
         40: "40px",
         30: "30px",
+      },
+      borderColor: {
+        DEFAULT: "#0000001A",
       },
       backgroundImage: {
         "gradient-custom":
