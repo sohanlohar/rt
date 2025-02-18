@@ -13,7 +13,7 @@ const AboutHero = () => {
             style={{ backgroundImage: `url(${heroAboutUs.src})` }}
           >
             <div className="flex flex-col items-center gap-1 md:gap-40">
-              <div className="border text-[10px] sm:text-xs md:text-2xl opacity-80 leading-5 sm:leading-6 border-white text-white font-karla font-thin px-4 sm:px-6 py-1 rounded-full w-fit">
+              <div className="border text-[10px] sm:text-sm md:text-2xl opacity-80 leading-5 sm:leading-6 border-white text-white font-karla font-thin px-4 sm:px-6 py-1 rounded-full w-fit">
                 Explore . Execute . Elevate
               </div>
               <h1 className="text-4xl md:text-8xl text-white-light z-10 font-archivo font-semibold uppercase">

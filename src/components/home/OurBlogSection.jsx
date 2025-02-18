@@ -63,13 +63,27 @@ const OurBlogSection = () => {
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 0,
-    speed: 2000,
+    autoplay: true,
+    autoplaySpeed: 50,
+    speed: 5000,
     arrows: false,
     dots: false,
     pauseOnHover: true,
     variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
   return (
     <section className="mb-16 md:mb-28">

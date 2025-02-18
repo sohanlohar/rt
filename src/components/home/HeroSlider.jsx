@@ -70,7 +70,7 @@ const HeroSlider = () => {
                   backgroundPosition: "center",
                 }}
               >
-                <div className="border text-[10px] sm:text-xs md:text-xl opacity-80 leading-5 sm:leading-6 border-white text-white font-karla font-thin px-4 sm:px-6 py-1 rounded-full w-fit text-center">
+                <div className="border text-[10px] sm:text-sm md:text-xl opacity-80 leading-5 sm:leading-6 border-white text-white font-karla font-thin px-4 sm:px-6 py-1 rounded-full w-fit text-center">
                   Explore . Execute . Elevate
                 </div>
                 <h1 className="heading-h1 max-w-5xl">
@@ -103,7 +103,7 @@ const HeroSlider = () => {
                         );
                       })}
                     </div>
-                    <p className="text-xs sm:text-base font-karla">
+                    <p className="text-sm sm:text-base font-karla">
                       {slide.description}
                     </p>
                   </div>
