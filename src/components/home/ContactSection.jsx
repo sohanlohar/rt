@@ -36,8 +36,8 @@ const ContactSection = () => {
   });
 
   return (
-    <section className="relative">
-      <div className="container flex flex-col md:flex-row gap-10 justify-between pl-8 md:pl-14 py-10 md:py-20 my-16 sm:flex-row">
+    <section className="relative ml-5 mr-5">
+      <div className="container flex flex-col md:flex-row gap-10 justify-between pl-0 md:pl-14 py-10 md:py-20 my-16 sm:flex-row">
         <div className="w-full md:w-1/3 relative flex gap-10 flex-col">
           <h3 className="text-3xl md:text-6xl text-white font-karla font-normal uppercase leading-none">
             Looking for a tech partner?
@@ -155,7 +155,7 @@ const ContactSection = () => {
           support your business with tailored solutions that meet your goals.
         </p>
       </div>
-      <div className="bg-[#01263B] absolute left-0 top-0 w-full h-full -z-10 ml-16 rounded-l-3xl"></div>
+      <div className="bg-[#01263B] absolute left-0 top-0 w-full h-full -z-10 ml-0 sm:ml-16 rounded-l-3xl"></div>
     </section>
   );
 };

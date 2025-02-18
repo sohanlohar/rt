@@ -60,19 +60,19 @@ const TechSlider = () => {
       {
         breakpoint: 991,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
         },
       },
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
     ],
   };
   return (
-    <section className="teck-slider mb-28">
+    <section className="teck-slider mb-10 sm:mb-28">
       <Slider {...settings}>
         {slidesData.map((slide, index) => {
           return (

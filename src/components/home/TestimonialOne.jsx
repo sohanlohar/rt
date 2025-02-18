@@ -129,11 +129,11 @@ const TestimonialOne = () => {
     ],
   };
   return (
-    <section className="mb-28">
+    <section className="mb-0 sm:mb-28">
       <Slider {...settings}>
         {slidesData.map((slide, index) => {
           return (
-            <div className="slide-wrapper" key={slide.reviewwerName}>
+            <div className="slide-wrapper h-auto" key={slide.reviewwerName}>
               <div className="flex gap-3 md:gap-5 flex-col w-80 md:w-[550px] justify-center bg-white px-4 md:px-8 py-5 md:py-10 m-3 border border-[#00000033] rounded-3xl">
                 <div className="flex items-center gap-5">
                   <div className="w-10 h-10 rounded-full">
@@ -163,7 +163,7 @@ const TestimonialOne = () => {
       <Slider {...settings2}>
         {slidesData.map((slide, index) => {
           return (
-            <div className="slide-wrapper" key={slide.reviewwerName}>
+            <div className="slide-wrapper h-auto" key={slide.reviewwerName}>
               <div className="flex gap-3 md:gap-5 flex-col w-80 md:w-[550px] justify-center bg-white  px-4 md:px-8 py-5 md:py-10 m-3 border border-[#00000033] rounded-3xl">
                 <div className="flex items-center gap-5">
                   <div className="w-10 h-10 rounded-full">

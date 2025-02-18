@@ -57,7 +57,7 @@ const HeroSlider = () => {
     arrows: false,
   };
   return (
-    <section className="mb-20 container">
+    <section className="mb-10 sm:mb-20 container">
       <Slider {...settings}>
         {slidesData.map((slide, index) => {
           return (
