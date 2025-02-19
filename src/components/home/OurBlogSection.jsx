@@ -70,6 +70,7 @@ const OurBlogSection = () => {
     dots: false,
     pauseOnHover: true,
     variableWidth: true,
+    adaptiveHeight:true,
     responsive: [
       {
         breakpoint: 991,

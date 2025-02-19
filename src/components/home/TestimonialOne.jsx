@@ -84,6 +84,7 @@ const TestimonialOne = () => {
     dots: false,
     pauseOnHover: true,
     variableWidth: true,
+    adaptiveHeight:true,
     responsive: [
       {
         breakpoint: 991,
@@ -113,6 +114,7 @@ const TestimonialOne = () => {
     pauseOnHover: true,
     variableWidth: true,
     rtl: true, 
+    adaptiveHeight:true,
     responsive: [
       {
         breakpoint: 991,
@@ -129,7 +131,7 @@ const TestimonialOne = () => {
     ],
   };
   return (
-    <section className="mb-0 sm:mb-28">
+    <section className="mb-10 sm:mb-28">
       <Slider {...settings}>
         {slidesData.map((slide, index) => {
           return (
