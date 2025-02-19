@@ -57,19 +57,19 @@ const ApproachSection = () => {
           believe the best results come from working together.
         </p>
       </div>
-      <div className="">
+      <div className="bg-[#F1F1F1] p-10 rounded-40">
         {ourApproach.map((item, index) => {
           return (
             <div
-              className={`flex gap-28 items-center my-10 ${
-                index % 2 == 0 ? "flex-row" : "flex-row-reverse"
+              className={`flex gap-12 sm:gap-28 items-center my-10 ${
+                index % 2 == 0 ? "flex-col sm:flex-row" : "flex-col sm:flex-row-reverse"
               }`}
-              key={index}
+              key={item.title}
             >
-              <div className="w-2/5">
+              <div className="w-full sm:w-2/5">
                 <Image src={item.imageUrl} alt="about us background" />
               </div>
-              <div className="w-3/5">
+              <div className="w-full sm:w-3/5">
                 <h4 className="text-4xl font-archivo text-black font-bold mb-5">
                   {item.title}
                 </h4>
