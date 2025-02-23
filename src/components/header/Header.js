@@ -31,7 +31,7 @@ const Header = () => {
         </div>
 
         <div className="hidden md:block">
-          <button className="btn-primary">Contact US</button>
+          <button className="btn-primary rounded-full px-5">Contact US</button>
         </div>
 
         <div className="md:hidden">

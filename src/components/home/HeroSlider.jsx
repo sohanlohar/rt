@@ -4,36 +4,12 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import slide1Bg from "../../assets/images/slide1-bg.png";
 import slide2Bg from "../../assets/images/slide2-bg.jpg";
+import slide3Bg from "../../assets/images/slide3-bg.gif";
 
 const slidesData = [
   {
-    background: slide1Bg,
-    title: "Building Websites that Inspire & Perform",
-    description:
-      "Elevate your digital presence with a website that’s tailored to your brand and designed to connect, captivate, and convert users.",
-    stats: [
-      { value: "250+", label: "Lorem Ipsum" },
-      { value: "300+", label: "Lorem Ipsum" },
-      { value: "150+", label: "Lorem Ipsum" },
-      { value: "400+", label: "Lorem Ipsum" },
-    ],
-    specialWords: ["Websites"],
-  },
-  {
-    background: slide2Bg,
-    title: "Elevating Your Vision with Intuitive Mobile Apps",
-    description:
-      "From user-centered design to powerful functionality, we build mobile apps that engage users and drive your brand’s success.",
-    stats: [
-      { value: "120+", label: "Projects Delivered" },
-      { value: "50+", label: "Happy Clients" },
-      { value: "200+", label: "Successful Campaigns" },
-      { value: "30+", label: "Industries Covered" },
-    ],
-    specialWords: ["Mobile", "Apps"],
-  },
-  {
-    background: slide2Bg,
+    background: slide3Bg,
+    bgGradient: "linear-gradient(135deg, #013b41, #05111d)",
     title: "Coding Seamless Custom Solutions for Your Business",
     description:
       "We deliver solutions that streamline operations, & drive measurable results, ensuring you stay ahead in a competitive landscape.",
@@ -44,6 +20,39 @@ const slidesData = [
       { value: "10+", label: "Years of Experience" },
     ],
     specialWords: ["Seamless", "Solutions"],
+    blendMode: true,
+  },
+  {
+    background: slide1Bg,
+    bgGradient:
+      "linear-gradient(52.91deg, rgba(0, 38, 58, 0.9) 1.12%, rgba(2, 113, 126, 0.9) 79.96%)",
+    title: "Building Websites that Inspire & Perform",
+    description:
+      "Elevate your digital presence with a website that’s tailored to your brand and designed to connect, captivate, and convert users.",
+    stats: [
+      { value: "250+", label: "Lorem Ipsum" },
+      { value: "300+", label: "Lorem Ipsum" },
+      { value: "150+", label: "Lorem Ipsum" },
+      { value: "400+", label: "Lorem Ipsum" },
+    ],
+    specialWords: ["Websites"],
+    blendMode: false,
+  },
+  {
+    background: slide2Bg,
+    bgGradient:
+      "linear-gradient(52.91deg, rgba(0, 38, 58, 0.9) 1.12%, rgba(2, 113, 126, 0.9) 79.96%)",
+    title: "Elevating Your Vision with Intuitive Mobile Apps",
+    description:
+      "From user-centered design to powerful functionality, we build mobile apps that engage users and drive your brand’s success.",
+    stats: [
+      { value: "120+", label: "Projects Delivered" },
+      { value: "50+", label: "Happy Clients" },
+      { value: "200+", label: "Successful Campaigns" },
+      { value: "30+", label: "Industries Covered" },
+    ],
+    specialWords: ["Mobile", "Apps"],
+    blendMode: false,
   },
 ];
 
@@ -65,9 +74,10 @@ const HeroSlider = () => {
               <div
                 className="banner-slider h-[calc(100vh-130px)] bg-cover bg-center p-6 sm:p-8 md:p-10 lg:p-12 xl:p-12 !pb-6 sm:!pb-10 rounded-40 text-white flex justify-between flex-col"
                 style={{
-                  background: `linear-gradient(52.91deg, rgba(0, 38, 58, 0.9) 1.12%, rgba(2, 113, 126, 0.9) 79.96%), url('${slide.background.src}')`,
+                  background: `${slide.bgGradient}, url('${slide.background.src}')`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
+                  backgroundBlendMode: slide.blendMode ? "overlay" : "normal",
                 }}
               >
                 <div className="border text-[10px] sm:text-sm md:text-xl opacity-80 leading-5 sm:leading-6 border-white text-white font-karla font-thin px-4 sm:px-6 py-1 rounded-full w-fit text-center">

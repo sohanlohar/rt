@@ -26,7 +26,7 @@ const Footer = () => {
         <div className="flex flex-col gap-5">
           <div className="flex flex-col md:flex-row gap-8 items-start md:items-end">
             <div className="w-full md:w-2/5 p-5">
-              <div className="w-[250px] h-[70px]">
+              <div className="w-[180px] md:w-[250px]">
                 <Image
                   alt="RT Logo"
                   loading="lazy"

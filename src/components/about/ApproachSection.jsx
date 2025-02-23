@@ -49,7 +49,7 @@ const ApproachSection = () => {
     <section className="container my-16">
       <div className="mb-20">
         <h2 className="heading-h2 mb-10">Our Approach</h2>
-        <p className="text-xl font-karla font-normal leading-10">
+        <p className="text-xl font-karla font-normal leading-8 md:leading-10">
           At Ranav Technologies, we believe that every business is unique, and
           so are its challenges. That’s why we take the time to understand your
           business inside and out before crafting a solution that’s tailor-made

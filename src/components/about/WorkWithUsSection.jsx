@@ -35,7 +35,7 @@ const workWithUsData = [
 
 const WorkWithUsSection = () => {
   return (
-    <section className="container rounded-40 mb-24 px-8 sm:px-14 py-12 sm:py-20 bg-[#F1F1F1]">
+    <section className="container rounded-40 mb-10 md:mb-24 px-8 sm:px-14 py-12 sm:py-20 bg-[#F1F1F1]">
       <div className="flex flex-col sm:flex-row gap-10 sm:gap-14 mb-16">
         <h2 className="w-full sm:w-1/3 heading-h2 font-archivo font-bold text-primary">
           WHY <br />
@@ -49,7 +49,7 @@ const WorkWithUsSection = () => {
           clients love working with us:
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-5 mt-14 mb-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-0 md:px-5 mt-14 mb-20">
         {workWithUsData.map((item, index) => {
           return (
             <div className="flex flex-col sm:flex-row items-center gap-8" key={item.title}>

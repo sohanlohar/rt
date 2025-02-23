@@ -86,7 +86,7 @@ const OurServicesSection = () => {
             We help you achieve more with technology that works as hard as you
             do.
           </p>
-          <button className="w-fit border border-primary text-primary rounded-full font-karla text-sm md:text-xl leading-4 px-8 py-2">
+          <button className="btn-secondary w-fit">
             OUR PROCESS
           </button>
         </div>
@@ -118,11 +118,11 @@ const OurServicesSection = () => {
                   {slide.description}
                 </p>
                 <button
-                  className={`w-fit z-10 border ${
+                  className={`w-fit z-10 border hover:border-primary-dark ${
                     slide.textDark
                       ? "text-black border-black"
                       : "text-white border-white"
-                  }   rounded-full font-karla text-sm md:text-xl px-8 py-2`}
+                  }   rounded-full font-karla text-sm md:text-xl px-8 py-2 hover:bg-primary-dark hover:text-white`}
                 >
                   EXPLORE MORE
                 </button>

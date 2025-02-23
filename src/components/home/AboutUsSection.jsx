@@ -21,7 +21,7 @@ const AboutUsSection = () => {
         <h2 className="text-primary-extraDark heading-h2 z-10">About us</h2>
         <Link
           href="/"
-          className="border z-10 border-primary-dark text-primary-dark rounded-full font-karla text-base md:text-xl px-4 md:px-8 py-2"
+          className="btn-secondary"
         >
           READ MORE
         </Link>
