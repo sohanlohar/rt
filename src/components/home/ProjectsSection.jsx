@@ -13,9 +13,8 @@ const ProjectsSection = () => {
       <div className="flex flex-col justify-center gap-3 w-full md:w-3/4 items-center mb-5 md:mb-14 max-w-screen-lg m-auto text-center">
         <h2 className="text-primary heading-h2">Our Projects</h2>
         <p className="text-sm md:text-xl text-black font-karla font-normal mb-5">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-          ever. Lorem Ipsum is simply
+          Explore our portfolio to see how we transform ideas into reality
+          through cutting-edge development and exceptional user experiences.
         </p>
       </div>
       <div className="flex flex-col gap-8">

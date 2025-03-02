@@ -61,19 +61,19 @@ const OurProcess = () => {
           return (
             <div
               className={`flex ${
-                index % 2 == 0 ? "flex-row" : "flex-row-reverse"
+                index % 2 == 0 ? "flex-col md:flex-row" : "flex-col md:flex-row-reverse"
               } my-20`}
               key={item.title}
             >
-              <div className="w-1/3"></div>
+              <div className="w-full md:w-1/3"></div>
               <div
-                className={`w-2/3 bg-[#EFEFEF] ${
+                className={`w-full md:w-2/3 bg-[#EFEFEF] ${
                   index % 2 == 0
-                    ? "rounded-tl-full rounded-bl-full"
-                    : "rounded-tr-full rounded-br-full"
+                    ? "rounded-tl-0 md:rounded-tl-full rounded-bl-0 md:rounded-bl-full"
+                    : "rounded-tr-0 md:rounded-tr-full rounded-br-0 md:rounded-br-full"
                 } px-10 py-9`}
               >
-                <div className="flex gap-10 items-center">
+                <div className="flex flex-col md:flex-row gap-10 items-center">
                   <div>
                     <div
                       className={`w-36 h-36 flex items-center justify-center relative border-[2.1px] border-dashed border-black rounded-full`}

@@ -8,16 +8,38 @@ import mail from "../../assets/icons/icon-mail.png";
 import git from "../../assets/icons/icon-git.png";
 import Image from "next/image";
 import RTlogo from "../../assets/images/footer-logo.png";
+import { quickLinks } from "./quickLinks";
+import Link from "next/link";
 
 const Footer = () => {
   const socialIcons = [
-    { iconName: "mail", srcPath: mail },
-    { iconName: "llinkedin", srcPath: llinkedin },
-    { iconName: "twitter", srcPath: twitter },
-    { iconName: "instagram", srcPath: instagram },
-    { iconName: "facebook", srcPath: facebook },
-    { iconName: "git", srcPath: git },
-    { iconName: "youtube", srcPath: youtube },
+    {
+      iconName: "mail",
+      srcPath: mail,
+      path: "support@ranavtechnologies.com",
+      type: "mail",
+    },
+    {
+      iconName: "llinkedin",
+      srcPath: llinkedin,
+      path: "https://www.linkedin.com/company/ranav-technologies/posts/?feedView=all",
+      type: "link",
+    },
+    { iconName: "twitter", srcPath: twitter, path: "", type: "link" },
+    {
+      iconName: "instagram",
+      srcPath: instagram,
+      path: "https://www.instagram.com/ranavtechnologies_official/reels/",
+      type: "link",
+    },
+    { iconName: "facebook", srcPath: facebook, path: "", type: "link" },
+    // { iconName: "git", srcPath: git, path: "", type: "link" },
+    {
+      iconName: "youtube",
+      srcPath: youtube,
+      path: "https://www.youtube.com/@ranavtechnologies_official",
+      type: "link",
+    },
   ];
 
   return (
@@ -48,13 +70,13 @@ const Footer = () => {
                 Quick Links
               </h4>
               <ul className="list-none flex items-center flex-wrap text-sm md:text-xl gap-4 font-karla text-black">
-                <li>About</li>
-                <li>Services</li>
-                <li>Portfolio</li>
-                {/* <li>Case Studies</li> */}
-                <li>Career</li>
-                <li>Blogs</li>
-                <li>Contact Us</li>
+                {quickLinks.map((item) => {
+                  return (
+                    <Link key={item.menuName} href={item.menuPath}>
+                      <li key={item.menuName}>{item.menuName}</li>
+                    </Link>
+                  );
+                })}
               </ul>
             </div>
           </div>
@@ -66,27 +88,36 @@ const Footer = () => {
               </h4>
               <div className="flex gap-2 justify-between flex-wrap text-sm font-karla font-normal">
                 <p>© 2024 RANAV TECHNOLOGIES</p>
-                <p>Privacy Policy</p>
-                <p>Terms & Conditions</p>
+                <Link href="/privacy-policy">Privacy Policy</Link>
+                <Link href="/terms-and-conditions">Terms & Conditions</Link>
               </div>
             </div>
             <div className="w-full md:w-3/5 p-5">
               <h4 className="font-bold mb-5 text-xl md:text-2xl uppercase font-karla text-black-dark">
                 SOCIALS
               </h4>
-              <ul className="flex flex-wrap justify-between gap-5 md:gap-10">
+              <ul className="flex flex-wrap justify-between gap-5 md:gap-10 max-w-md">
                 {socialIcons.map((icon) => {
                   return (
-                    <li key={icon.iconName}>
-                      <Image
-                        alt={icon.iconName}
-                        loading="lazy"
-                        width="20"
-                        decoding="async"
-                        style={{ color: "transparent" }}
-                        src={icon.srcPath}
-                      />
-                    </li>
+                    <Link
+                      key={icon.iconName}
+                      href={
+                        icon.type === "mail" ? `mailto:${icon.path}` : icon.path
+                      }
+                      rel="noopener noreferrer"
+                      target={icon.type === "mail" ? `_self` : "_blank"}
+                    >
+                      <li>
+                        <Image
+                          alt={icon.iconName}
+                          loading="lazy"
+                          width="20"
+                          decoding="async"
+                          style={{ color: "transparent" }}
+                          src={icon.srcPath}
+                        />
+                      </li>
+                    </Link>
                   );
                 })}
               </ul>

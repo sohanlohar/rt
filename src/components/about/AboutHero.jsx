@@ -6,17 +6,17 @@ import heroAboutUs from "../../assets/images/hero-about-us.jpeg";
 const AboutHero = () => {
   return (
     <>
-      <section className="relative mb-16">
+      <section className="relative mb-10 md:mb-16">
         <div className="container">
           <div
-            className="p-12 w-full h-96 md:h-[650px] rounded-40 bg-cover bg-center bg-no-repeat relative z-10 flex justify-center"
+            className="p-12 w-full h-[calc(100vh-90px)] md:h-[calc(100vh-125px)] rounded-40 bg-cover bg-center bg-no-repeat relative z-10 flex justify-center"
             style={{ backgroundImage: `url(${heroAboutUs.src})` }}
           >
-            <div className="flex flex-col items-center gap-24 md:gap-40">
+            <div className="flex flex-col items-center gap-32 md:gap-40">
               <div className="border text-[10px] sm:text-sm md:text-2xl opacity-100 leading-5 sm:leading-6 border-white text-white font-karla font-thin px-4 sm:px-6 py-1 rounded-full w-fit bg-[rgba(0,0,0,0.3)]">
                 Explore . Execute . Elevate
               </div>
-              <h1 className="text-4xl md:text-8xl text-white-light z-10 font-archivo font-semibold uppercase">
+              <h1 className="text-4xl md:text-7xl text-white-light z-10 font-archivo font-semibold uppercase">
                 About Us
               </h1>
             </div>
@@ -35,8 +35,8 @@ const AboutHero = () => {
           />
         </div>
       </section>
-      <section className="mb-24 container">
-        <p className="text-xl md:text-2xl font-karla text-justify leading-normal text-black mb-6">
+      <section className="mb-20 md:mb-24 container">
+        <p className="xs:text-base text-xl md:text-2xl font-karla text-justify leading-normal text-black mb-6">
           At Ranav Technologies, we believe that technology should work for
           people, not the other way around. We exist to make the complex
           simple—using innovative solutions to solve your biggest challenges.

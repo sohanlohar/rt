@@ -57,7 +57,7 @@ const ApproachSection = () => {
           believe the best results come from working together.
         </p>
       </div>
-      <div className="bg-[#F1F1F1] p-10 rounded-40">
+      <div className="bg-[#F1F1F1] p-8 md:p-10 rounded-40">
         {ourApproach.map((item, index) => {
           return (
             <div
@@ -70,7 +70,7 @@ const ApproachSection = () => {
                 <Image src={item.imageUrl} alt="about us background" />
               </div>
               <div className="w-full sm:w-3/5">
-                <h4 className="text-4xl font-archivo text-black font-bold mb-5">
+                <h4 className="text-2xl md:text-4xl font-archivo text-black font-bold mb-5">
                   {item.title}
                 </h4>
                 <p className="text-xl font-karla text-black font-light leading-8">
