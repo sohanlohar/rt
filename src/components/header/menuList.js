@@ -2,9 +2,10 @@ import AboutIcon from "@/assets/svg/AboutIcon";
 import BlogsIcon from "@/assets/svg/BlogsIcon";
 import CareerIcon from "@/assets/svg/CareerIcon";
 import ContactIcon from "@/assets/svg/ContactIcon";
-import HomeIcon from "@/assets/svg/homeIcon";
+import HomeIcon from "@/assets/svg/HomeIcon";
 import PortpolioIcon from "@/assets/svg/PortpolioIcon";
 import ServicesIcon from "@/assets/svg/ServicesIcon";
+
 
 export const menuList = [
   {
