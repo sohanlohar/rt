@@ -10,7 +10,7 @@ const OurBlogSection = () => {
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 50,
     speed: 5000,
     arrows: false,

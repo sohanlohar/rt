@@ -46,6 +46,7 @@ module.exports = {
       },
       width: {
         85: "85%",
+        90: "90%",
       },
       maxWidth: {
         85: "85%",
