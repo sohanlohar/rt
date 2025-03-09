@@ -7,7 +7,7 @@ const OurBlogSection = () => {
   const settings = {
     cssEase: "linear",
     centerMode: true,
-    infinite: true,
+    infinite: false,
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: false,
@@ -77,10 +77,10 @@ const OurBlogSection = () => {
                     </h4>
                     <div className="flex flex-row justify-between items-center">
                       <p className="text-[7px] md:text-base text-black-dark font-karla font-normal">
-                        10 JULY 2024
+                      {blog.date}
                       </p>
                       <p className="bg-[#225A77] px-2 md:px-4 leading-none py-1 md:py-2 text-white-light rounded-[13px] text-[7px] md:text-sm">
-                        Machine learning
+                        {blog.tag}
                       </p>
                     </div>
                   </div>

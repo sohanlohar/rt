@@ -89,7 +89,7 @@ const ProjectDetail = () => {
           >
             <div className="absolute inset-0 bg-black/50 z-0 rounded-40"></div>
             <div className="flex flex-col items-center justify-center gap-10 z-10">
-              <button className="flex items-center gap-2 rounded-10 bg-white px-2 py-1 absolute left-10 top-10">
+              <button onClick={() => router.back()} className="flex items-center gap-2 rounded-10 bg-white px-2 py-1 absolute left-10 top-10">
                 <span className="flex items-center bg-primary w-5 h-5 rounded-full justify-center text-center">
                   <Image src={arrowLeftWhite} alt="arrow right" />
                 </span>{" "}

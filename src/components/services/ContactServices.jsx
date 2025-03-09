@@ -37,7 +37,7 @@ const ContactServices = () => {
 
   return (
     <section className="relative">
-      <div className="container flex flex-col md:flex-row gap-10 justify-between pr-8 md:pr-14 py-10 md:py-20 my-16 sm:flex-row">
+      <div className="container flex flex-col md:flex-row gap-10 justify-between pr-0 sm:pr-8 md:pr-14 py-10 md:py-20 my-16 sm:flex-row">
         <div className="w-full md:w-1/3 relative flex gap-10 flex-col">
           <h3 className="text-3xl md:text-6xl text-white font-karla font-normal uppercase leading-none">
             Get Your Custom Quote
@@ -159,7 +159,7 @@ const ContactServices = () => {
           and let’s make it happen together!
         </p>
       </div>
-      <div className="bg-[#014D57] absolute right-0 top-0 w-full h-full -z-10 mr-16 rounded-r-3xl"></div>
+      <div className="bg-[#014D57] absolute right-0 top-0 w-full h-full -z-10 mr-0 md:mr-16 rounded-r-3xl"></div>
     </section>
   );
 };

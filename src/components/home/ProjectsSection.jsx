@@ -67,7 +67,7 @@ const ProjectsSection = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-8 justify-between relative">
+          {/* <div className="flex flex-col md:flex-row gap-8 justify-between relative">
             <div
               className={`w-full md:w-3/5 flex flex-col justify-between gap-5 md:gap-8 p-5 md:p-10 border border-[#00000033] rounded-3xl transition-all duration-500 ${
                 hoveredSection === "ultrasoundMD"
@@ -121,9 +121,9 @@ const ProjectsSection = () => {
                 }`}
               />
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className="group cursor-pointer flex justify-between rounded-full items-center bg-primary-light hover:bg-primary-dark px-5 md:px-10 h-12 md:h-20 py-4 mt-5 transition-all duration-300 ease-in-out">
+        {/* <div className="group cursor-pointer flex justify-between rounded-full items-center bg-primary-light hover:bg-primary-dark px-5 md:px-10 h-12 md:h-20 py-4 mt-5 transition-all duration-300 ease-in-out">
           <p className="text-black group-hover:text-white font-archivo font-normal text-xs md:text-3xl capitalize transition-all">
             Explore more Projects
           </p>
@@ -141,7 +141,7 @@ const ProjectsSection = () => {
               className="hidden group-hover:block"
             />
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

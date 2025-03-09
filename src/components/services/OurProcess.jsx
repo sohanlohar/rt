@@ -42,7 +42,7 @@ const processData = [
 
 const OurProcess = () => {
   return (
-    <section>
+    <section id="our-process">
       <div className="mx-16 mt-24">
         <div className="mb-10 mx-auto max-w-6xl text-center">
           <h2 className="text-6xl font-archivo text-center font-normal text-black-dark mb-5">

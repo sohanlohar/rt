@@ -5,6 +5,7 @@ import personalIcon from "../../assets/icons/personal-icon.png";
 import futureReadyIcon from "../../assets/icons/future-ready-icon.png";
 import tailoredIcon from "../../assets/icons/tailored-icon.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const workWithUsData = [
   {
@@ -71,7 +72,7 @@ const WorkWithUsSection = () => {
         })}
       </div>
       <div className="mt-10 flex gap-5 text-center flex-col sm:flex-row justify-between items-center text-4xl font-archivo font-bold">
-        <button className="btn-primary rounded-40">Contact Us</button>
+        <Link href='/contact-us' className="btn-primary rounded-40 px-7 leading-none py-3">Contact Us</Link>
         <h3>Because we care.</h3>
       </div>
     </section>

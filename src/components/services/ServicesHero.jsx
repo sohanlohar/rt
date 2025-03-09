@@ -16,8 +16,7 @@ const ServicesHero = () => {
               Ready to Transform Your Business?
             </h1>
             <p className="text-base md:text-2xl text-white-light font-normal text-center">
-              Explore our services designed to drive your success with reliable,
-              innovative tech solutions tailored to your needs.
+            We bring innovative technology to life, helping businesses achieve their goals through custom solutions. From software development to data engineering, our portfolio showcases the expertise and creativity we bring to every project.
             </p>
           </div>
         </div>

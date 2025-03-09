@@ -20,7 +20,7 @@ const AboutUsSection = () => {
       <div className="flex justify-between flex-row pb-5 md:pb-10 items-end">
         <h2 className="text-primary-extraDark heading-h2 z-10">About us</h2>
         <Link
-          href="/"
+          href="/about"
           className="btn-secondary"
         >
           READ MORE

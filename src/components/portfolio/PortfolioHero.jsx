@@ -13,11 +13,13 @@ const PortfolioHero = () => {
               className="text-4xl md:text-6xl text-white-light z-10 font-archivo font-semibold"
               style={{ letterSpacing: "-2px" }}
             >
-              Ready to Transform Your Business?
+              Explore Our Projects
             </h1>
             <p className="text-2xl text-white-light font-normal text-center">
-              Explore our services designed to drive your success with reliable,
-              innovative tech solutions tailored to your needs.
+              We bring innovative technology to life, helping businesses achieve
+              their goals through custom solutions. From software development to
+              data engineering, our portfolio showcases the expertise and
+              creativity we bring to every project.
             </p>
           </div>
         </div>

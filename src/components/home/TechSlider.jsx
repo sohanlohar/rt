@@ -46,7 +46,7 @@ const TechSlider = () => {
   const settings = {
     cssEase: "linear",
     centerMode: true,
-    rtl: true,
+    rtl: false,
     infinite: true,
     slidesToShow: 6,
     slidesToScroll: 1,

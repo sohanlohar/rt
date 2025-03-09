@@ -1,3 +1,4 @@
+import Link from "next/link";
 import servicesSlide1 from "../../assets/images/services-slide1.jpg";
 import servicesSlide2 from "../../assets/images/services-slide2.jpeg";
 import servicesSlide3 from "../../assets/images/services-slide3.jpeg";
@@ -86,9 +87,9 @@ const OurServicesSection = () => {
             We help you achieve more with technology that works as hard as you
             do.
           </p>
-          <button className="btn-secondary w-fit">
+          <Link href="/services#our-process" className="btn-secondary w-fit">
             OUR PROCESS
-          </button>
+          </Link>
         </div>
 
         <div className="vertical-scroll-snap w-full md:w-2/3">
@@ -118,7 +119,7 @@ const OurServicesSection = () => {
                   {slide.description}
                 </p>
                 <button
-                  className={`w-fit z-10 border hover:border-primary-dark ${
+                  className={`invisible w-fit z-10 border hover:border-primary-dark ${
                     slide.textDark
                       ? "text-black border-black"
                       : "text-white border-white"

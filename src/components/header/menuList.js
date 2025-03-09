@@ -6,7 +6,6 @@ import HomeIcon from "@/assets/svg/HomeIcon";
 import PortpolioIcon from "@/assets/svg/PortpolioIcon";
 import ServicesIcon from "@/assets/svg/ServicesIcon";
 
-
 export const menuList = [
   {
     menuName: "Home",
@@ -23,21 +22,21 @@ export const menuList = [
     menuIcon: (color) => <ServicesIcon color={color} />,
     menuPath: "/services",
   },
-  {
-    menuName: "Portfolio",
-    menuIcon: (color) => <PortpolioIcon color={color} />,
-    menuPath: "/portfolio",
-  },
-  {
-    menuName: "Career",
-    menuIcon: (color) => <CareerIcon color={color} />,
-    menuPath: "/career",
-  },
-  {
-    menuName: "Blog",
-    menuIcon: (color) => <BlogsIcon color={color} />,
-    menuPath: "/blog",
-  },
+  // {
+  //   menuName: "Portfolio",
+  //   menuIcon: (color) => <PortpolioIcon color={color} />,
+  //   menuPath: "/portfolio",
+  // },
+  // {
+  //   menuName: "Career",
+  //   menuIcon: (color) => <CareerIcon color={color} />,
+  //   menuPath: "/careers",
+  // },
+  // {
+  //   menuName: "Blog",
+  //   menuIcon: (color) => <BlogsIcon color={color} />,
+  //   menuPath: "/blog",
+  // },
   {
     menuName: "Contact Us",
     menuIcon: (color) => <ContactIcon color={color} />,

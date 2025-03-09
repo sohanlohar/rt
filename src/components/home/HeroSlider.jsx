@@ -15,7 +15,7 @@ const slidesData = [
       "We deliver solutions that streamline operations, & drive measurable results, ensuring you stay ahead in a competitive landscape.",
     stats: [
       { value: "500+", label: "Hours of Innovation" },
-      { value: "300+", label: "Technologies Used" },
+      { value: "30+", label: "Technologies Used" },
       { value: "50+", label: "Industry Awards" },
       { value: "10+", label: "Years of Experience" },
     ],
@@ -30,10 +30,10 @@ const slidesData = [
     description:
       "Elevate your digital presence with a website that’s tailored to your brand and designed to connect, captivate, and convert users.",
     stats: [
-      { value: "250+", label: "Lorem Ipsum" },
-      { value: "300+", label: "Lorem Ipsum" },
-      { value: "150+", label: "Lorem Ipsum" },
-      { value: "400+", label: "Lorem Ipsum" },
+      { value: "700+", label: "Hours of Innovation" },
+      { value: "200+", label: "Websites Delivered" },
+      { value: "150+", label: "Happy Clients" },
+      { value: "10+", label: "Years of Experience" },
     ],
     specialWords: ["Websites"],
     blendMode: false,
@@ -47,7 +47,7 @@ const slidesData = [
       "From user-centered design to powerful functionality, we build mobile apps that engage users and drive your brand’s success.",
     stats: [
       { value: "120+", label: "Projects Delivered" },
-      { value: "50+", label: "Happy Clients" },
+      { value: "300+", label: "Happy Clients" },
       { value: "200+", label: "Successful Campaigns" },
       { value: "30+", label: "Industries Covered" },
     ],
