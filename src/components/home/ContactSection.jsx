@@ -3,6 +3,7 @@ import React from "react";
 import horizentalArrow from "../../assets/icons/horizental-arrow.png";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import ContactForm from "../forms/ContactForm";
 
 const validationSchema = Yup.object({
   firstName: Yup.string()
@@ -36,13 +37,13 @@ const ContactSection = () => {
   });
 
   return (
-    <section className="relative ml-5 mr-5">
+    <section className="relative">
       <div className="container flex flex-col md:flex-row gap-10 justify-between pl-0 md:pl-14 py-10 md:py-20 my-16 sm:flex-row">
         <div className="w-full md:w-1/3 relative flex gap-10 flex-col">
           <h3 className="text-3xl md:text-6xl text-white font-karla font-normal uppercase leading-none">
-            Looking for a tech partner?
+            Looking <br/>for a tech partner?
           </h3>
-          <p className="text-3xl text-white font-karla font-light text-justify leading-normal hidden md:block">
+          <p className="text-3xl text-white font-karla font-light text-justify leading-snug hidden md:block">
             Get in touch with us today. Our team is ready to discuss how we can
             support your business with tailored solutions that meet your goals.
           </p>
@@ -55,100 +56,7 @@ const ContactSection = () => {
           </div>
         </div>
         <div className="bg-white rounded-40 px-5 md:px-10 py-8 md:py-10 w-full md:w-[750px]">
-          <form onSubmit={formik.handleSubmit} className="">
-            <div className="flex flex-col md:flex-row gap-0 md:gap-5 justify-between">
-              <div className="flex flex-col mb-3 w-full">
-                <label
-                  htmlFor="firstName"
-                  className="text-sm md:text-lg font-karla font-medium mb-1"
-                >
-                  *First Name
-                </label>
-                <input
-                  type="text"
-                  name="firstName"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.firstName}
-                  className="border border-black rounded-full p-2 md:p-3"
-                  placeholder="Enter First Name"
-                />
-                {formik.touched.firstName && formik.errors.firstName ? (
-                  <div className="text-red-500 text-xs">
-                    {formik.errors.firstName}
-                  </div>
-                ) : null}
-              </div>
-              <div className="flex flex-col mb-3 w-full">
-                <label
-                  htmlFor="lastName"
-                  className="text-sm md:text-lg font-karla font-medium mb-1"
-                >
-                  *Last Name
-                </label>
-                <input
-                  type="text"
-                  name="lastName"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.lastName}
-                  className="border border-black rounded-full p-2 md:p-3"
-                  placeholder="Enter Last Name"
-                />
-                {formik.touched.lastName && formik.errors.lastName ? (
-                  <div className="text-red-500 text-xs">
-                    {formik.errors.lastName}
-                  </div>
-                ) : null}
-              </div>
-            </div>
-            <div className="flex flex-col mb-5">
-              <label
-                htmlFor="email"
-                className="text-sm md:text-lg font-karla font-medium mb-1"
-              >
-                *Email Address
-              </label>
-              <input
-                type="email"
-                name="email"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.email}
-                className="border border-black rounded-full p-2 md:p-3"
-                placeholder="Enter Email"
-              />
-              {formik.touched.email && formik.errors.email ? (
-                <div className="text-red-500 text-xs">
-                  {formik.errors.email}
-                </div>
-              ) : null}
-            </div>
-
-            <div className="flex flex-col mb-2">
-              <textarea
-                name="message"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.message}
-                className="border border-black rounded-30 p-5"
-                rows={5}
-                placeholder="Enter Message"
-              />
-              {formik.touched.message && formik.errors.message ? (
-                <div className="text-red-500 text-xs">
-                  {formik.errors.message}
-                </div>
-              ) : null}
-            </div>
-
-            <button
-              type="submit"
-              className="bg-secondary text-2xl md:text-3xl uppercase leading-none text-white p-1 md:p-2 mt-4 w-full rounded-full py-3 md:py-5 hover:bg-primary-dark font-karla"
-            >
-              Submit
-            </button>
-          </form>
+          <ContactForm />
         </div>
         <p className="text-base text-white font-karla font-light text-justify leading-5 block md:hidden">
           Get in touch with us today. Our team is ready to discuss how we can

@@ -51,104 +51,6 @@ const ContactForm = ({ requestQuote }) => {
   });
 
   return (
-    // <form onSubmit={formik.handleSubmit} className="">
-    //   <div className="flex flex-col md:flex-row gap-0 md:gap-5 justify-between">
-    //     <div className="flex flex-col mb-3 w-full">
-    //       <label
-    //         htmlFor="firstName"
-    //         className="text-sm md:text-lg font-karla font-medium mb-1"
-    //       >
-    //         *First Name
-    //       </label>
-    //       <input
-    //         type="text"
-    //         name="firstName"
-    //         onChange={formik.handleChange}
-    //         onBlur={formik.handleBlur}
-    //         value={formik.values.firstName}
-    //         className="border border-black rounded-full p-2 md:p-3"
-    //         placeholder="Enter First Name"
-    //       />
-    //       {formik.touched.firstName && formik.errors.firstName ? (
-    //         <div className="text-red-500 text-xs">
-    //           {formik.errors.firstName}
-    //         </div>
-    //       ) : null}
-    //     </div>
-    //     <div className="flex flex-col mb-3 w-full">
-    //       <label
-    //         htmlFor="lastName"
-    //         className="text-sm md:text-lg font-karla font-medium mb-1"
-    //       >
-    //         *Last Name
-    //       </label>
-    //       <input
-    //         type="text"
-    //         name="lastName"
-    //         onChange={formik.handleChange}
-    //         onBlur={formik.handleBlur}
-    //         value={formik.values.lastName}
-    //         className="border border-black rounded-full p-2 md:p-3"
-    //         placeholder="Enter Last Name"
-    //       />
-    //       {formik.touched.lastName && formik.errors.lastName ? (
-    //         <div className="text-red-500 text-xs">{formik.errors.lastName}</div>
-    //       ) : null}
-    //     </div>
-    //   </div>
-    //   <div className="flex flex-col mb-5">
-    //     <label
-    //       htmlFor="email"
-    //       className="text-sm md:text-lg font-karla font-medium mb-1"
-    //     >
-    //       *Email Address
-    //     </label>
-    //     <input
-    //       type="email"
-    //       name="email"
-    //       onChange={formik.handleChange}
-    //       onBlur={formik.handleBlur}
-    //       value={formik.values.email}
-    //       className="border border-black rounded-full p-2 md:p-3"
-    //       placeholder="Enter Email"
-    //     />
-    //     {formik.touched.email && formik.errors.email ? (
-    //       <div className="text-red-500 text-xs">{formik.errors.email}</div>
-    //     ) : null}
-    //   </div>
-
-    //   <div className="flex flex-col mb-2">
-    //     <textarea
-    //       name="message"
-    //       onChange={formik.handleChange}
-    //       onBlur={formik.handleBlur}
-    //       value={formik.values.message}
-    //       className="border border-black rounded-30 p-5"
-    //       rows={5}
-    //       placeholder="Enter Message"
-    //     />
-    //     {formik.touched.message && formik.errors.message ? (
-    //       <div className="text-red-500 text-xs">{formik.errors.message}</div>
-    //     ) : null}
-    //   </div>
-
-    //   <div className="flex flex-row gap-10">
-    //     <button
-    //       type="submit"
-    //       className="bg-secondary text-2xl md:text-3xl uppercase leading-none text-white p-1 md:p-2 mt-4 w-full rounded-full py-3 md:py-5 hover:bg-primary-dark font-karla"
-    //     >
-    //       Submit
-    //     </button>
-    //     {requestQuote && (
-    //       <button
-    //         type="submit"
-    //         className="bg-secondary text-2xl md:text-3xl uppercase leading-none text-white p-1 md:p-2 mt-4 w-full rounded-full py-3 md:py-5 hover:bg-primary-dark font-karla"
-    //       >
-    //         Request a quote
-    //       </button>
-    //     )}
-    //   </div>
-    // </form>
     <form onSubmit={formik.handleSubmit} className="">
       <div className="flex flex-col md:flex-row gap-0 md:gap-5 justify-between">
         <div className="flex flex-col mb-3 w-full">
@@ -232,7 +134,7 @@ const ContactForm = ({ requestQuote }) => {
         )}
       </div>
 
-      <div className="flex flex-row gap-10">
+      <div className="flex flex-col md:flex-row gap-4 md:gap-10">
         <button
           type="submit"
           className="bg-secondary text-2xl md:text-3xl uppercase leading-none text-white p-1 md:p-2 mt-4 w-full rounded-full py-3 md:py-5 hover:bg-primary-dark font-karla"

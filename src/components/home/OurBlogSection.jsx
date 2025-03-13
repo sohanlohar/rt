@@ -2,17 +2,17 @@ import { blogsData } from "@/utils/blogs";
 import Image from "next/image";
 import Slider from "react-slick";
 import arrowRightYellow from "../../assets/icons/arrow-right-yellow.png";
+import Link from "next/link";
 
 const OurBlogSection = () => {
   const settings = {
     cssEase: "linear",
-    centerMode: true,
+    centerMode: false,
     infinite: false,
     slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 50,
-    speed: 5000,
+    slidesToScroll: 2,
+    autoplay: true,
+    speed: 800,
     arrows: false,
     dots: false,
     pauseOnHover: true,
@@ -33,16 +33,18 @@ const OurBlogSection = () => {
       },
     ],
   };
+
   return (
-    <section className="mb-16 md:mb-28">
-      <div className="flex flex-col justify-center gap-3 items-center mb-5 md:mb-14 max-w-screen-lg m-auto text-center">
+    <section className="relative mb-16 md:mb-28">
+      <div className="flex flex-col justify-center gap-3 items-center mb-5 md:mb-14  m-auto text-center">
         <h2 className="heading-h2 text-primary">Our Blogs</h2>
       </div>
-      <Slider {...settings}>
-        {blogsData.map((blog, index) => {
-          return (
+
+      <div className={`transition-all duration-500 m-auto`}>
+        <Slider {...settings}>
+          {blogsData.map((blog, index) => (
             <div className="slide-wrapper" key={blog.title}>
-              <div className="group relative w-80 md:w-[500px] m-3 p-4 md:p-8 rounded-3xl text-white flex justify-between flex-col h-48 md:h-96 overflow-hidden">
+              <div className="group relative w-80 md:w-[500px] mx-3 p-4 md:p-8 rounded-3xl text-white flex justify-between flex-col h-48 md:h-96 overflow-hidden">
                 <div
                   className="absolute inset-0 transition-all duration-500"
                   style={{
@@ -72,12 +74,13 @@ const OurBlogSection = () => {
                   </div>
 
                   <div className="flex flex-col justify-between">
-                    <h4 className="text-base md:text-4xl text-black-dark font-karla font-extrabold mb-1 md:mb-3">
+                    <h4 className="text-base md:text-4xl text-black-dark font-karla font-extrabold mb-1 md:mb-3 line-clamp-2">
                       {blog.title}
                     </h4>
+
                     <div className="flex flex-row justify-between items-center">
                       <p className="text-[7px] md:text-base text-black-dark font-karla font-normal">
-                      {blog.date}
+                        {blog.date}
                       </p>
                       <p className="bg-[#225A77] px-2 md:px-4 leading-none py-1 md:py-2 text-white-light rounded-[13px] text-[7px] md:text-sm">
                         {blog.tag}
@@ -87,9 +90,31 @@ const OurBlogSection = () => {
                 </div>
               </div>
             </div>
-          );
-        })}
-      </Slider>
+          ))}
+
+          <div className="slide-wrapper">
+            <div className="flex justify-center items-center h-48 md:h-96 m-3 text-center">
+              <Link
+                href="/blogs"
+                target="_self"
+                rel="noopener noreferrer"
+                className="flex flex-col gap-4 items-center px-6 py-3 text-3xl uppercase text-black rounded-lg font-semibold hover:bg-opacity-80 transition"
+              >
+                <div className="bg-secondary p-4 w-14 md:w-24 h-14 md:h-24 flex justify-center items-center rounded-full transition-colors duration-300 hover:bg-primary">
+                  <Image
+                    src={arrowRightYellow}
+                    alt="arrow-title"
+                    width={20}
+                    height={20}
+                    className="filter invert brightness-0"
+                  />
+                </div>
+                View All
+              </Link>
+            </div>
+          </div>
+        </Slider>
+      </div>
     </section>
   );
 };

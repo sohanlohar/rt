@@ -45,7 +45,7 @@ const Header = () => {
             <div className="hidden md:block">
               <Link
                 href="/contact-us"
-                className="btn-primary rounded-full px-5"
+                className="btn-primary rounded-full px-5 focus:ring-0 focus:ring-offset-0"
               >
                 Contact US
               </Link>

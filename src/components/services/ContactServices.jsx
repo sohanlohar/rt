@@ -3,6 +3,7 @@ import React from "react";
 import horizentalArrow from "../../assets/icons/horizental-arrow.png";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import ContactForm from "../forms/ContactForm";
 
 const validationSchema = Yup.object({
   firstName: Yup.string()
@@ -57,7 +58,7 @@ const ContactServices = () => {
           </div> */}
         </div>
         <div className="bg-white rounded-40 px-5 md:px-10 py-8 md:py-10 w-full md:w-[750px]">
-          <form onSubmit={formik.handleSubmit} className="">
+          {/* <form onSubmit={formik.handleSubmit} className="">
             <div className="flex flex-col md:flex-row gap-0 md:gap-5 justify-between">
               <div className="flex flex-col mb-3 w-full">
                 <label
@@ -150,7 +151,8 @@ const ContactServices = () => {
             >
               Submit
             </button>
-          </form>
+          </form> */}
+          <ContactForm />
         </div>
         <p className="text-base text-white font-karla font-light text-justify leading-5 block md:hidden">
           Tell us what you’re looking for, and we’ll craft a tailored solution

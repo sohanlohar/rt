@@ -57,7 +57,7 @@ const ApproachSection = () => {
           believe the best results come from working together.
         </p>
       </div>
-      <div className="bg-[#F1F1F1] p-8 md:p-10 rounded-40">
+      <div className="p-8 md:p-10 rounded-40">
         {ourApproach.map((item, index) => {
           return (
             <div

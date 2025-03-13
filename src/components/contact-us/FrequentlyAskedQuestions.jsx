@@ -49,13 +49,13 @@ const FrequentlyAskedQuestions = () => {
   return (
     <section className="container">
       <div className="grid"></div>
-      <div class="grid grid-cols-3 gap-4">
-        <div class="flex flex-col justify-between py-10 pl-4">
-          <h3 className="text-6xl font-archivo font-bold text-primary">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="flex flex-col justify-between py-10 pl-4">
+          <h3 className="text-3xl md:text-6xl font-archivo font-bold text-primary">
             Frequently Asked Questions
           </h3>
         </div>
-        <div class="col-span-2 rounded-40 px-8 py-12">
+        <div className="col-span-2 rounded-40 px-0 md:px-8 pt-0 md:py-12">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -69,7 +69,7 @@ const FrequentlyAskedQuestions = () => {
               }}
             >
               <button
-                className="w-full flex justify-between items-center p-4 text-left font-medium text-lg bg-gray-100 hover:bg-gray-200"
+                className="w-full flex justify-between items-center p-4 text-left font-medium text-sm md:text-lg bg-gray-100 hover:bg-gray-200"
                 onClick={() => toggleAccordion(index)}
               >
                 {faq.question}

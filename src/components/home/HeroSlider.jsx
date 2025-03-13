@@ -9,7 +9,9 @@ import slide3Bg from "../../assets/images/slide3-bg.gif";
 const slidesData = [
   {
     background: slide3Bg,
-    bgGradient: "linear-gradient(135deg, #013b41, #05111d)",
+    // bgGradient: "linear-gradient(135deg, #013b41, #05111d)",
+    bgGradient:
+      "linear-gradient(135deg, rgba(0, 38, 58, 0.7) 10.12%, rgba(0, 38, 58, 0.5) 79.96%)",
     title: "Coding Seamless Custom Solutions for Your Business",
     description:
       "We deliver solutions that streamline operations, & drive measurable results, ensuring you stay ahead in a competitive landscape.",
@@ -23,25 +25,9 @@ const slidesData = [
     blendMode: true,
   },
   {
-    background: slide1Bg,
-    bgGradient:
-      "linear-gradient(52.91deg, rgba(0, 38, 58, 0.9) 1.12%, rgba(2, 113, 126, 0.9) 79.96%)",
-    title: "Building Websites that Inspire & Perform",
-    description:
-      "Elevate your digital presence with a website that’s tailored to your brand and designed to connect, captivate, and convert users.",
-    stats: [
-      { value: "700+", label: "Hours of Innovation" },
-      { value: "200+", label: "Websites Delivered" },
-      { value: "150+", label: "Happy Clients" },
-      { value: "10+", label: "Years of Experience" },
-    ],
-    specialWords: ["Websites"],
-    blendMode: false,
-  },
-  {
     background: slide2Bg,
     bgGradient:
-      "linear-gradient(52.91deg, rgba(0, 38, 58, 0.9) 1.12%, rgba(2, 113, 126, 0.9) 79.96%)",
+      "linear-gradient(52.91deg, rgba(0, 38, 58, 1) 1.12%, rgba(2, 113, 126, 0.9) 79.96%)",
     title: "Elevating Your Vision with Intuitive Mobile Apps",
     description:
       "From user-centered design to powerful functionality, we build mobile apps that engage users and drive your brand’s success.",
@@ -52,6 +38,22 @@ const slidesData = [
       { value: "30+", label: "Industries Covered" },
     ],
     specialWords: ["Mobile", "Apps"],
+    blendMode: false,
+  },
+  {
+    background: slide1Bg,
+    bgGradient:
+      "linear-gradient(52.91deg, rgba(0, 38, 58, 0.85) 1.12%, rgba(2, 113, 126, 0.9) 79.96%)",
+    title: "Building Websites that Inspire & Perform",
+    description:
+      "Elevate your digital presence with a website that’s tailored to your brand and designed to connect, captivate, and convert users.",
+    stats: [
+      { value: "700+", label: "Hours of Innovation" },
+      { value: "200+", label: "Websites Delivered" },
+      { value: "150+", label: "Happy Clients" },
+      { value: "10+", label: "Years of Experience" },
+    ],
+    specialWords: ["Websites"],
     blendMode: false,
   },
 ];

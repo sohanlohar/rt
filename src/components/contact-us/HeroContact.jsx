@@ -4,7 +4,7 @@ import heroContactBg from "../../assets/images/hero-contact-bg.jpg";
 const HeroContact = () => {
   return (
     <section className="container">
-      <div className="relative mb-16">
+      <div className="relative mb-5 md:mb-16">
         <div
           className="p-12 w-full h-[calc(100vh-90px)] md:h-[calc(100vh-125px)] rounded-40 bg-cover bg-center bg-no-repeat relative z-10 flex justify-center"
           style={{ backgroundImage: `url(${heroContactBg.src})` }}
