@@ -32,11 +32,11 @@ export const menuList = [
   //   menuIcon: (color) => <CareerIcon color={color} />,
   //   menuPath: "/careers",
   // },
-  // {
-  //   menuName: "Blog",
-  //   menuIcon: (color) => <BlogsIcon color={color} />,
-  //   menuPath: "/blog",
-  // },
+  {
+    menuName: "Blog",
+    menuIcon: (color) => <BlogsIcon color={color} />,
+    menuPath: "/blog",
+  },
   {
     menuName: "Contact Us",
     menuIcon: (color) => <ContactIcon color={color} />,
