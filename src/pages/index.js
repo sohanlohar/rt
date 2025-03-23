@@ -16,7 +16,7 @@ export default function Home() {
       <OurServicesSection />
       <ProjectsSection />
       <TestimonialOne />
-      <OurBlogSection />
+      <OurBlogSection sectionTite="Our Blog"/>
       <ContactSection />
     </>
   );

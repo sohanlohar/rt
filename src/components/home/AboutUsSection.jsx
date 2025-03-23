@@ -7,10 +7,15 @@ import iconSetting from "../../assets/icons/icon-setting.png";
 import iconCode from "../../assets/icons/icon-code.png";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const AboutUsSection = () => {
   return (
-    <section
+    <motion.section
+      animate={{
+        scale: [1, 2, 2, 1, 1],
+        rotate: [0, 0, 270, 270, 0],
+      }}
       id="target-section"
       className="container relative mb-8 sm:mb-28 px-4 md:px-20 py-4 md:pt-24 pb-10 rounded-40"
       style={{
@@ -19,10 +24,7 @@ const AboutUsSection = () => {
     >
       <div className="flex justify-between flex-row pb-5 md:pb-10 items-end">
         <h2 className="text-primary-extraDark heading-h2 z-10">About us</h2>
-        <Link
-          href="/about"
-          className="btn-secondary"
-        >
+        <Link href="/about" className="btn-secondary">
           READ MORE
         </Link>
       </div>
@@ -117,7 +119,7 @@ const AboutUsSection = () => {
         alt="about us background"
         className="absolute top-0 right-0 w-full h-full"
       />
-    </section>
+    </motion.section>
   );
 };
 

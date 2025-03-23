@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const PrivacyPolicy = () => {
   return (
-    <section className="container">
+    <section className="container privacy-terms">
       <div className="relative mb-16">
         <div
           className="p-12 w-full h-[calc(100vh-90px)] md:h-[calc(100vh-125px)] rounded-40 bg-cover bg-center bg-no-repeat relative z-10 flex justify-center"
@@ -26,103 +26,93 @@ const PrivacyPolicy = () => {
       </div>
       <div>
         <p className="mb-5">
-          {" "}
-          Ranav Technologies (&quot;we,&quot; &quot;our,&quot; or
-          &quot;us&quot;) is committed to protecting your privacy. This Privacy
-          Policy outlines how we collect, use, and protect your information when
-          you use our website and services. By using our website and services,
-          you consent to the collection and use of your information in
-          accordance with this Privacy Policy.
+          At Ranav Technologies, we are committed to protecting your privacy and
+          ensuring the security of your personal information. This Privacy
+          Policy explains how we collect, use, and safeguard your data when you
+          engage with our IT services, mobile app development, and website
+          development solutions.
         </p>
         <h4 className="text-xl font-medium my-2">Information We Collect</h4>
         <p>We may collect the following types of information:</p>
-        <ul>
+        <ul className="list-items">
           <li>
-            Personal Information: Name, email address, phone number, and other
-            contact details when you interact with us.
+            Personal Information: Name, email, phone number, company details
+            (when contacting us or using our services).
           </li>
           <li>
-            Usage Data: Information about how you interact with our website,
-            including IP address, browser type, and pages visited.
+            Technical Data: IP address, browser type, operating system, and
+            usage details collected through cookies and analytics.
           </li>
           <li>
-            Cookies and Tracking Technologies: To enhance user experience and
-            analyze website performance.
-          </li>
-          <li>
-            Payment Information: If you make a purchase, we may collect billing
-            details and transaction information.
+            Project Information: Any data or content shared with us for
+            development purposes.
           </li>
         </ul>
-        <h4 className="text-xl font-medium my-2">How We Use Your Information </h4>
-        <p>We use your information for the following purposes:</p>
-        <ul>
-          <li>To provide and improve our services.</li>
-          <li>To personalize user experience and offer relevant content.</li>
+        <h4 className="text-xl font-medium my-2">
+          How We Use Your Information
+        </h4>
+        <p>We use your data to:</p>
+        <ul className="list-items">
+          <li>Deliver and improve our services.</li>
           <li>
-            To communicate with you regarding updates, promotions, and customer
-            support.
+            Communicate updates, support, and project-related information.
           </li>
-          <li>
-            To analyze website performance and user behavior to enhance
-            functionality.
-          </li>
-          <li>To detect and prevent fraudulent or unauthorized activities.</li>
-          <li>To comply with legal obligations and enforce our policies.</li>
+          <li>Enhance website functionality and user experience.</li>
+          <li>Process transactions and maintain business records.</li>
+          <li>Comply with legal obligations and ensure security.</li>
         </ul>{" "}
-        <h4 className="text-xl font-medium my-2">Sharing of Information</h4>
-        <p>
-          We do not sell or rent your personal information. However, we may
-          share your information with:
-        </p>
-        <ul>
+        <h4 className="text-xl font-medium my-2">Data Security & Protection</h4>
+        <p>We implement strict security measures, including:</p>
+        <ul className="list-items">
+          <li>Encryption: Securing sensitive data in transit and storage.</li>
           <li>
-            Service Providers: Third-party vendors who assist in providing our
-            services, including hosting, analytics, payment processing, and
-            customer support.
+            Access Control: Restricting data access to authorized personnel.
           </li>
           <li>
-            Legal Compliance: If required by law, regulation, or legal process,
-            or to protect our rights, property, and safety.{" "}
-          </li>
-          <li>
-            Business Transfers: In case of a merger, acquisition, or sale of
-            assets, your information may be transferred to the new entity.{" "}
+            Regular Audits: Ensuring continuous protection against threats.
           </li>
         </ul>
-        <h4 className="text-xl font-medium my-2">Data Security</h4>
+        <h4 className="text-xl font-medium my-2">
+          Information Sharing & Third Parties
+        </h4>
+        <p>We do not sell your data. However, we may share it with:</p>
+        <ul className="list-items">
+          <li>
+            Trusted service providers for hosting, payment processing, or
+            analytics.
+          </li>
+          <li>Legal authorities when required by law.</li>
+        </ul>
+        <h4 className="text-xl font-medium my-2">
+          Cookies & Tracking Technologies{" "}
+        </h4>
         <p>
-          We implement industry-standard security measures to protect your data
-          from unauthorized access, alteration, or disclosure. However, no
-          method of transmission over the internet or electronic storage is 100%
-          secure, and we cannot guarantee absolute security.
+          Our website uses cookies to enhance user experience. You can disable
+          cookies in your browser settings, but some features may not function
+          properly.
         </p>
         <h4 className="text-xl font-medium my-2">Your Rights</h4>
-        <p>You have the right to:</p>
-        <ul>
-          <li>Access, update, or delete your personal information.</li>
-          <li>Opt out of marketing communications and promotional emails.</li>
-          <li>
-            Request data portability to receive a copy of your data in a
-            structured format.
-          </li>
-          <li>Withdraw consent for data processing where applicable.</li>
+        <p>You can request to:</p>
+        <ul className="list-items">
+          <li>Access, update, or delete your personal data.</li>
+          <li>Opt out of marketing communications.</li>
         </ul>
+        <p>
+          To exercise your rights, contact us at{" "}
+          <Link href="mailto:support@ranavtechnologies.com">
+            support@ranavtechnologies.com
+          </Link>
+          .
+        </p>
+        <h4 className="text-xl font-medium my-2">Data Retention</h4>
+        <p>
+          We retain data only as long as necessary for business operations or
+          legal compliance.
+        </p>
         <h4 className="text-xl font-medium my-2">Third-Party Links</h4>
         <p>
-          {" "}
-          Our website may contain links to third-party websites. We are not
-          responsible for their privacy practices or content. We encourage you
-          to review their privacy policies before providing any personal
-          information.
-        </p>
-        <h4 className="text-xl font-medium my-2">Children&apos;s Privacy</h4>
-        <p>
-          {" "}
-          Our services are not intended for children under the age of 13. We do
-          not knowingly collect personal information from children. If we become
-          aware of such data collection, we will take appropriate steps to
-          delete the information.
+          Our website may contain links to external websites. We are not
+          responsible for their privacy practices.
         </p>{" "}
         <h4 className="text-xl font-medium my-2">Changes to This Policy</h4>
         <p>
@@ -131,19 +121,41 @@ const PrivacyPolicy = () => {
           of significant changes by posting the updated policy on our website
           with the revised effective date.
         </p>
-        <h4 className="text-xl font-medium my-2">Contact Us</h4>
+        <h4 className="text-xl font-medium my-2">Changes to This Policy</h4>
         <p>
-          {" "}
-          If you have any questions about this Privacy Policy, please contact us
-          at:
-        </p>{" "}
-        Ranav Technologies{" "}
-        <Link href="mailto:support@ranavtechnologies.com" className="text-primary">
-          support@ranavtechnologies.com
-        </Link>{" "}
-        Vijay Nagar Indore By using our website and services, you agree to this
-        Privacy Policy. If you do not agree, please discontinue use of our
-        services.
+          We may update this policy as needed. Changes will be posted on this
+          page, and we encourage regular review.
+        </p>
+        <h4 className="text-xl font-medium my-2">Contact Us</h4>
+        <ul>
+          <li>
+            📧Email:
+            <Link
+              href="mailto:support@ranavtechnologies.com"
+              className="text-primary"
+            >
+              support@ranavtechnologies.com
+            </Link>
+          </li>
+          <li>
+            📞Phone:
+            <Link href="tel:+91 8770736130" className="text-primary">
+              +91 8770736130
+            </Link>
+          </li>
+          <li>
+            🌐Website:
+            <Link
+              target="_blank"
+              href="http://www.ranavtechnologies.com"
+              className="text-primary"
+            >
+              www.ranavtechnologies.com
+            </Link>
+          </li>
+        </ul>
+        This Privacy Policy outlines how Ranav Technologies handles your data
+        responsibly. If you have any concerns, feel free to reach out.
       </div>
     </section>
   );

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const TermsAndConditions = () => {
   return (
-    <section className="container">
+    <section className="container privacy-terms">
       <div className="relative mb-16">
         <div
           className="p-12 w-full h-[calc(100vh-90px)] md:h-[calc(100vh-125px)] rounded-40 bg-cover bg-center bg-no-repeat relative z-10 flex justify-center"
@@ -26,152 +26,122 @@ const TermsAndConditions = () => {
       </div>
       <div>
         <p className="mb-5">
-          {" "}
-          Welcome to Ranav Technologies (&quot;we,&quot; &quot;our,&quot; or
-          &quot;us&quot;) These Terms and Conditions govern your use of our
-          website and services. By accessing or using our website, you agree to
-          comply with and be bound by these terms. If you do not agree, please
-          refrain from using our services.
+          Welcome to <b>Ranav Technologies</b>. By accessing or using our
+          website and services, you agree to comply with and be bound by the
+          following Terms & Conditions. Please read these terms carefully before
+          using our website or services.
         </p>
         <h4 className="text-xl font-medium my-2">Acceptance of Terms</h4>
-        <ul>
+        <p>
+          By accessing or using the website and services of{" "}
+          <b>Ranav Technologies</b>, you agree to abide by these Terms &
+          Conditions and any applicable laws or regulations. If you do not agree
+          to these terms, please refrain from using our website and services.
+        </p>
+        <h4 className="text-xl font-medium my-2">Our Services</h4>
+        <p>
+          <b>Ranav Technologies</b> provides a wide range of digital services,
+          including but not limited to UX/UI design, mobile app development,
+          software development, website development, and digital strategy.
+          Specific terms for each service may be provided in individual
+          contracts and agreements.
+        </p>
+        <h4 className="text-xl font-medium my-2">User Responsibilities</h4>
+        <ul className="list-items">
           <li>
-            By accessing or using our website, you confirm that you are at least
-            18 years old and have the legal authority to agree to these terms.
+            Account Information: You are responsible for maintaining the
+            confidentiality of your account information and any passwords or
+            credentials provided by us
           </li>
           <li>
-            Your continued use of our services constitutes acceptance of any
-            modifications to these terms.
-          </li>
-        </ul>
-        <h4 className="text-xl font-medium my-2">Use of Services</h4>
-        <ul>
-          <li>
-            You agree to use our services only for lawful purposes and in
-            compliance with all applicable laws and regulations.
-          </li>
-          <li>
-            You may not misuse our website or services, including attempting
-            unauthorized access, distributing malware, or engaging in fraudulent
-            activities.
-          </li>
-          <li>
-            We reserve the right to restrict, suspend, or terminate your access
-            if we suspect misuse.
+            Content Submission: You are solely responsible for any content you
+            submit or share through our website or services. By submitting
+            content, you guarantee that you own the rights to it and that it
+            does not violate any laws or third-party rights.
           </li>
         </ul>{" "}
         <h4 className="text-xl font-medium my-2">
           Intellectual Property Rights
         </h4>
-        <ul>
-          <li>
-            All content on this website, including text, images, logos, and
-            software, is the property of Ranav Technologies and is protected by
-            copyright, trademark, and intellectual property laws.
-          </li>
-          <li>
-            You may not copy, reproduce, modify, distribute, or exploit any
-            content without our prior written consent.
-          </li>
-        </ul>
-        <h4 className="text-xl font-medium my-2">User Responsibilities</h4>
-        <p>You agree not to:</p>
-        <ul>
-          <li>Submit false or misleading information.</li>
-          <li>Infringe on any intellectual property rights.</li>
-          <li>
-            Upload or distribute harmful software, spam, or any unlawful
-            content.
-          </li>
-          <li>
-            Attempt to interfere with the proper functioning of our services.
-          </li>
-        </ul>
-        <h4 className="text-xl font-medium my-2">Payments and Refund Policy</h4>
-        <ul>
-          <li>
-            If our services involve payments, you agree to provide accurate
-            billing information.
-          </li>
-          <li>
-            Payments are non-refundable unless explicitly stated otherwise.
-          </li>
-          <li>
-            We reserve the right to change pricing and payment terms at any
-            time.
-          </li>
-        </ul>
-        <h4 className="text-xl font-medium my-2">Disclaimer of Warranties</h4>
-        <ul>
-          <li>
-            Our services are provided &quot;as is&quot; and &quot;as
-            available&quot; without any warranties, express or implied.
-          </li>
-          <li>
-            We do not guarantee uninterrupted access, error-free operation, or
-            absolute security.
-          </li>
-          <li>
-            We are not responsible for any damages resulting from the use or
-            inability to use our services.
-          </li>
-        </ul>
-        <h4 className="text-xl font-medium my-2">Limitation of Liability</h4>
-        <ul>
-          <li>
-            To the maximum extent permitted by law, Ranav Technologies is not
-            liable for any indirect, incidental, or consequential damages
-            arising from your use of our services.
-          </li>
-          <li>
-            Our liability, if any, shall not exceed the amount you paid for our
-            services.
-          </li>
-        </ul>
-        <h4 className="text-xl font-medium my-2">Termination of Services</h4>
-        <ul>
-          <li>
-            We may suspend or terminate your access to our services at any time,
-            with or without notice, if you violate these terms.
-          </li>
-          <li>
-            You may stop using our services at any time without prior notice.
-          </li>
-        </ul>
-        <h4 className="text-xl font-medium my-2">
-          Third-Party Links and Services
-        </h4>
-        <ul>
-          <li>
-            Our website may contain links to third-party websites. We do not
-            endorse or take responsibility for any third-party content or
-            policies.
-          </li>
-          <li>You access third-party services at your own risk.</li>
-        </ul>
-        <h4 className="text-xl font-medium my-2">Updates to These Terms</h4>
-        <ul>
-          <li>
-            We may update these Terms and Conditions at any time. Any changes
-            will be posted on this page with a revised effective date.
-          </li>
-        </ul>
-        <h4 className="text-xl font-medium my-2">Contact Information</h4>
         <p>
-          {" "}
-          If you have any questions about these Terms and Conditions, please
-          contact us at:
-        </p>{" "}
-        Ranav Technologies{" "}
-        <Link
-          href="mailto:support@ranavtechnologies.com"
-          className="text-primary"
-        >
-          support@ranavtechnologies.com
-        </Link>{" "}
-        Vijay Nagar Indore, By using our website and services, you acknowledge
-        that you have read, understood, and agreed to these Terms and
-        Conditions.
+          All content, designs, and intellectual property related to{" "}
+          <b>Ranav Technologies</b>(including logos, trademarks, and service
+          marks) are owned by <b>Ranav Technologies</b> or our licensors. You
+          may not use, reproduce, or distribute any materials from the website
+          or our services without prior written permission.
+        </p>
+        <h4 className="text-xl font-medium my-2">Payment Terms</h4>
+        <p>
+          Payment for services will be specified in the individual service
+          agreements. Payments must be made according to the payment terms
+          outlined in the contract. Failure to make timely payments may result
+          in delays or suspension of services.
+        </p>
+        <h4 className="text-xl font-medium my-2">Confidentiality</h4>
+        <p>
+          We are committed to maintaining the confidentiality of your
+          information. Both parties agree to keep any sensitive or proprietary
+          information shared during the course of our relationship confidential,
+          unless required by law or for the fulfillment of the services.
+        </p>
+        <h4 className="text-xl font-medium my-2">Limitation of Liability</h4>
+        <p>
+          <b>Ranav Technologies</b> will not be held liable for any damages,
+          losses, or expenses incurred as a result of using our services,
+          including but not limited to indirect, incidental, or consequential
+          damages. While we strive to provide quality services, we do not
+          guarantee specific outcomes.
+        </p>
+        <h4 className="text-xl font-medium my-2">Termination of Services</h4>
+        <p>
+          <b>Ranav Technologies</b> reserves the right to suspend or terminate
+          access to our services if you violate these Terms & Conditions or
+          engage in unlawful activities. Termination may happen without prior
+          notice, and any payments made may not be refunded in such cases.
+        </p>
+        <h4 className="text-xl font-medium my-2">
+          Changes to Terms & Conditions
+        </h4>
+        <p>
+          We may update these Terms & Conditions from time to time. Any changes
+          will be posted on this page, and the “Effective Date” will be revised
+          accordingly. We encourage you to review this page periodically to stay
+          informed of any updates.
+        </p>
+        <h4 className="text-xl font-medium my-2">Governing Law</h4>
+        <p>
+          These Terms & Conditions shall be governed by the laws of MP,India.
+          Any disputes arising from these terms will be resolved in the
+          appropriate courts of Indore.
+        </p>
+        <h4 className="text-xl font-medium my-2">Contact Us</h4>
+        <ul>
+          <li>
+            📧Email:
+            <Link
+              href="mailto:support@ranavtechnologies.com"
+              className="text-primary"
+            >
+              support@ranavtechnologies.com
+            </Link>
+          </li>
+          <li>
+            📞Phone:
+            <Link href="tel:+91 8770736130" className="text-primary">
+              +91 8770736130
+            </Link>
+          </li>
+          <li>
+            🌐Website:
+            <Link
+              target="_blank"
+              href="http://www.ranavtechnologies.com"
+              className="text-primary"
+            >
+              www.ranavtechnologies.com
+            </Link>
+          </li>
+        </ul>
       </div>
     </section>
   );
