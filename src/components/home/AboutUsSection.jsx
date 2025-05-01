@@ -11,11 +11,11 @@ import { motion } from "framer-motion";
 
 const AboutUsSection = () => {
   return (
-    <motion.section
-      animate={{
-        scale: [1, 2, 2, 1, 1],
-        rotate: [0, 0, 270, 270, 0],
-      }}
+    <section
+      // animate={{
+      //   scale: [1, 2, 2, 1, 1],
+      //   rotate: [0, 0, 270, 270, 0],
+      // }}
       id="target-section"
       className="container relative mb-8 sm:mb-28 px-4 md:px-20 py-4 md:pt-24 pb-10 rounded-40"
       style={{
@@ -119,7 +119,7 @@ const AboutUsSection = () => {
         alt="about us background"
         className="absolute top-0 right-0 w-full h-full"
       />
-    </motion.section>
+    </section>
   );
 };
 

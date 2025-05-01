@@ -22,16 +22,16 @@ export const menuList = [
     menuIcon: (color) => <ServicesIcon color={color} />,
     menuPath: "/services",
   },
-  // {
-  //   menuName: "Portfolio",
-  //   menuIcon: (color) => <PortpolioIcon color={color} />,
-  //   menuPath: "/portfolio",
-  // },
-  // {
-  //   menuName: "Career",
-  //   menuIcon: (color) => <CareerIcon color={color} />,
-  //   menuPath: "/careers",
-  // },
+  {
+    menuName: "Portfolio",
+    menuIcon: (color) => <PortpolioIcon color={color} />,
+    menuPath: "/portfolio",
+  },
+  {
+    menuName: "Career",
+    menuIcon: (color) => <CareerIcon color={color} />,
+    menuPath: "/careers",
+  },
   {
     menuName: "Blog",
     menuIcon: (color) => <BlogsIcon color={color} />,

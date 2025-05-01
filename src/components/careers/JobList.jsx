@@ -8,25 +8,29 @@ const JobList = () => {
   const [selectedIndustry, setSelectedIndustry] = useState("all");
   const [selectedRecent, setSelectedRecent] = useState("all");
 
-  // Industries dropdown options
   const industries = ["all", "business", "tech", "design", "marketing"];
-  // Recent dropdown options
   const recentOptions = ["all", "7 days", "15 days", "30 days"];
 
   const filteredJobs = jobsData.filter((job) => {
-    const matchesSearch = job.title.toLowerCase().includes(search.toLowerCase());
+    const matchesSearch = job.title
+      .toLowerCase()
+      .includes(search.toLowerCase());
 
     const matchesIndustry =
-      selectedIndustry === "all" || job.industry.toLowerCase() === selectedIndustry;
+      selectedIndustry === "all" ||
+      job.industry.toLowerCase() === selectedIndustry;
 
     const matchesRecent =
       selectedRecent === "all" ||
       (selectedRecent === "7 days" &&
-        new Date(job.postedAt) >= new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)) ||
+        new Date(job.postedAt) >=
+          new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)) ||
       (selectedRecent === "15 days" &&
-        new Date(job.postedAt) >= new Date(Date.now() - 15 * 24 * 60 * 60 * 1000)) ||
+        new Date(job.postedAt) >=
+          new Date(Date.now() - 15 * 24 * 60 * 60 * 1000)) ||
       (selectedRecent === "30 days" &&
-        new Date(job.postedAt) >= new Date(Date.now() - 30 * 24 * 60 * 60 * 1000));
+        new Date(job.postedAt) >=
+          new Date(Date.now() - 30 * 24 * 60 * 60 * 1000));
 
     return matchesSearch && matchesIndustry && matchesRecent;
   });
@@ -34,7 +38,6 @@ const JobList = () => {
   return (
     <section className="container">
       <div className="p-4">
-        {/* Search Input */}
         <div className="flex justify-between items-center">
           <div className="relative w-fit">
             <Image
@@ -51,8 +54,6 @@ const JobList = () => {
               className="p-2 pl-10 border mb-3 w-fit rounded-40"
             />
           </div>
-
-          {/* Industry Dropdown */}
           <select
             className="px-4 py-2 border rounded"
             value={selectedIndustry}
@@ -64,8 +65,6 @@ const JobList = () => {
               </option>
             ))}
           </select>
-
-          {/* Recent Dropdown */}
           <select
             className="px-4 py-2 border rounded"
             value={selectedRecent}
@@ -78,14 +77,12 @@ const JobList = () => {
             ))}
           </select>
         </div>
-
-        {/* Job List */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
           {filteredJobs.length > 0 ? (
             filteredJobs.map((job) => (
               <div
                 key={job.id}
-                className="border flex justify-between flex-col rounded-40 bg-white px-6 py-10 border-[#0000001A]"
+                className="border flex justify-between gap-7 flex-col rounded-40 bg-white px-6 py-10 border-[#0000001A]"
               >
                 <div>
                   <div className="flex justify-between items-center">
@@ -96,12 +93,14 @@ const JobList = () => {
                       {job.noOfApplied} Applied
                     </div>
                   </div>
-                  <div className="flex justify-between items-center my-4">
+                  <div className="flex justify-between items-center">
                     <p className="text-sm font-archivo">
-                      <span className="text-primary">Experience:</span> {job.experience} years
+                      <span className="text-primary">Experience:</span>{" "}
+                      {job.experience} years
                     </p>
                     <p className="text-sm font-archivo">
-                      <span className="text-primary">Location:</span> {job.location}
+                      <span className="text-primary">Location:</span>{" "}
+                      {job.location}
                     </p>
                     <p className="text-sm font-archivo">
                       <span className="text-primary">Type:</span> {job.jobType}
@@ -109,12 +108,16 @@ const JobList = () => {
                   </div>
                 </div>
                 <div>
-                  <p className="text-base font-karla leading-10">{job.jobDes}</p>
-                  <p className="text-base py-5 ">
+                  <p className="text-base font-karla leading-8 text-black-dark">
+                    {job.jobDes}
+                  </p>
+                  <p className="text-base">
                     <span className="font-bold">Skills:</span> {job.skills}
                   </p>
                 </div>
-                <button className="btn-primary w-full rounded-40">APPLY NOW</button>
+                <button className="btn-primary w-full rounded-40">
+                  APPLY NOW
+                </button>
               </div>
             ))
           ) : (
