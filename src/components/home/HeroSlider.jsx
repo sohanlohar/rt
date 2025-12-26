@@ -118,7 +118,7 @@ const HeroSlider = () => {
                     );
                   })}
                 </h1>
-                <div>
+                <div className="flex justify-end flex-col">
                   {/* Container for Description and Stats - Mobile: Col (Desc then Stats), Desktop: Row (Stats then Desc) */}
                   <div className="flex flex-col md:flex-row gap-10 sm:gap-20 md:gap-40 md:items-end mb-4 sm:mb-6 h-full justify-between">
 
