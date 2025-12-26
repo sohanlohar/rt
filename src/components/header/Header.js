@@ -33,9 +33,8 @@ const Header = () => {
                   <Link
                     key={item.menuName}
                     href={item.menuPath}
-                    className={`text-base font-semibold font-karla uppercase hover:text-primary ${
-                      isActive ? "text-primary" : "text-gray-700"
-                    }`}
+                    className={`text-base font-semibold font-karla uppercase hover:text-primary ${isActive ? "text-primary" : "text-gray-700"
+                      }`}
                   >
                     {item.menuName}
                   </Link>
@@ -50,7 +49,12 @@ const Header = () => {
                 Contact US
               </Link>
             </div>
-            <button id="mobile-icon" className="md:hidden" onClick={toggleMenu}>
+            <button
+              id="mobile-icon"
+              className="md:hidden"
+              onClick={toggleMenu}
+              aria-label="Toggle mobile menu"
+            >
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -69,9 +73,8 @@ const Header = () => {
           </div>
 
           <div
-            className={`fixed top-0 left-0 w-full h-screen bg-white z-50 transition-transform duration-500 ease-in-out ${
-              isOpen ? "translate-x-0" : "-translate-x-full"
-            }`}
+            className={`fixed top-0 left-0 w-full h-screen bg-white z-50 transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
+              }`}
           >
             <div className="h-screen overflow-y-auto px-7 py-5">
               <div className="flex justify-between">
@@ -86,6 +89,7 @@ const Header = () => {
                   id="mobile-icon"
                   className="md:hidden"
                   onClick={toggleMenu}
+                  aria-label="Close mobile menu"
                 >
                   <svg
                     className="w-6 h-6"
@@ -114,9 +118,8 @@ const Header = () => {
                     >
                       <Link
                         href={item.menuPath}
-                        className={`flex items-center gap-5 text-base font-semibold font-karla uppercase hover:text-primary ${
-                          isActive ? "text-primary" : "text-gray-700"
-                        }`}
+                        className={`flex items-center gap-5 text-base font-semibold font-karla uppercase hover:text-primary ${isActive ? "text-primary" : "text-gray-700"
+                          }`}
                         onClick={toggleMenu}
                       >
                         {item.menuIcon(

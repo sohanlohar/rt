@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-const OurBlogSection = ({ sectionTite }) => {
+const OurBlogSection = ({ sectionTitle }) => {
   const settings = {
     cssEase: "linear",
     centerMode: false,
@@ -40,7 +40,7 @@ const OurBlogSection = ({ sectionTite }) => {
   return (
     <section className="relative mb-16 md:mb-28">
       <div className="flex flex-col justify-center gap-3 items-center mb-5 md:mb-14  m-auto text-center">
-        <h2 className="heading-h2 text-primary">{sectionTite}</h2>
+        <h2 className="heading-h2 text-primary">{sectionTitle}</h2>
       </div>
 
       <div className={`transition-all duration-500 m-auto`}>

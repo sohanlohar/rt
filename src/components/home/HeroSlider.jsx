@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image"; // Added import
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -25,6 +26,7 @@ const slidesData = [
     ],
     specialWords: ["Seamless", "Solutions"],
     blendMode: true,
+    hasBlur: false, // GIF does not support blur placeholder
   },
   {
     background: slide2Bg,
@@ -41,6 +43,7 @@ const slidesData = [
     ],
     specialWords: ["Mobile", "Apps"],
     blendMode: false,
+    hasBlur: true,
   },
   {
     background: slide1Bg,
@@ -57,6 +60,7 @@ const slidesData = [
     ],
     specialWords: ["Websites"],
     blendMode: false,
+    hasBlur: true,
   },
 ];
 
@@ -64,7 +68,7 @@ const HeroSlider = () => {
   const settings = {
     cssEase: "linear",
     centerMode: false,
-    autoplay: true,
+    autoplay: false,
     speed: 800,
     arrows: false,
     pauseOnHover: true,
@@ -78,16 +82,26 @@ const HeroSlider = () => {
       <Slider {...settings}>
         {slidesData.map((slide, index) => {
           return (
-            <div className="slide-wrapper relative" key={slide.title}>
+            <div className="slide-wrapper relative h-[calc(80vh-130px)] md:h-[calc(100vh-130px)]" key={slide.title}>
+              {/* Optimized Background Image */}
+              <Image
+                src={slide.background}
+                alt={slide.title} // better accessible alt text
+                fill
+                priority={index === 0} // Prioritize LCP for the first slide
+                placeholder={slide.hasBlur ? "blur" : "empty"} // Nice placeholder (works with static imports)
+                className="object-cover -z-10 rounded-40"
+              />
+              {/* Gradient Overlay */}
               <div
-                className="banner-slider h-[calc(100vh-130px)] bg-cover bg-center p-6 sm:p-8 md:p-10 lg:p-12 xl:p-12 !pb-6 sm:!pb-10 rounded-40 text-white flex justify-between flex-col"
+                className="absolute inset-0 z-0 rounded-40"
                 style={{
-                  background: `${slide.bgGradient}, url('${slide.background.src}')`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundBlendMode: slide.blendMode ? "overlay" : "normal",
+                  background: slide.bgGradient,
+                  mixBlendMode: slide.blendMode ? "overlay" : "normal",
                 }}
-              >
+              />
+
+              <div className="banner-slider h-full p-6 sm:p-8 md:p-10 lg:p-12 xl:p-12 !pb-6 sm:!pb-10 rounded-40 text-white flex justify-between flex-col relative z-10">
                 <div className="border text-[10px] sm:text-sm md:text-xl opacity-80 leading-5 sm:leading-6 border-white text-white font-karla font-thin px-4 sm:px-6 py-1 rounded-full w-fit text-center">
                   Explore . Execute . Elevate
                 </div>
@@ -105,28 +119,35 @@ const HeroSlider = () => {
                   })}
                 </h1>
                 <div>
-                  <div className="flex justify-between flex-col-reverse md:flex-row gap-10 sm:gap-20 md:gap-40 md:items-end mb-4 sm:mb-6">
-                    <div className="flex gap-2 justify-between sm:gap-8">
+                  {/* Container for Description and Stats - Mobile: Col (Desc then Stats), Desktop: Row (Stats then Desc) */}
+                  <div className="flex flex-col md:flex-row gap-10 sm:gap-20 md:gap-40 md:items-end mb-4 sm:mb-6 h-full justify-between">
+
+                    {/* Description - Moves to top on mobile via order property or structural change */}
+                    <p className="text-base sm:text-lg font-karla max-w-xl opacity-90 md:order-2">
+                      {slide.description}
+                    </p>
+
+                    {/* Stats - Moves to bottom on mobile */}
+                    <div className="grid grid-cols-4 gap-2 sm:gap-8 w-full md:w-auto md:order-1">
                       {slide.stats.map((stat, index) => {
                         return (
-                          <p
-                            className="text-2xl md:text-4xl leading-none font-bold text-white font-archivo flex flex-col"
-                            key={stat.value}
-                          >
-                            {stat.value}
-                            <span className="text-[8px] sm:text-sm font-karla font-normal">
-                              {stat.label}
-                            </span>
-                          </p>
+                          <div key={stat.value} className="flex flex-col items-start md:items-start">
+                            <p
+                              className="text-2xl md:text-4xl leading-none font-bold text-white font-archivo flex flex-col"
+                            >
+                              {stat.value}
+                              <span className="text-[10px] sm:text-sm font-karla font-normal mt-1 opacity-80">
+                                {stat.label}
+                              </span>
+                            </p>
+                          </div>
                         );
                       })}
                     </div>
-                    <p className="text-sm sm:text-base font-karla">
-                      {slide.description}
-                    </p>
+
                   </div>
                   <Link href="#target-section" passHref>
-                    <div className="hidden md:block text-center border border-white max-w-32 cursor-pointer text-xs uppercase rounded-full m-auto p-2">
+                    <div className="hidden md:block text-center border border-white max-w-32 cursor-pointer text-xs uppercase rounded-full m-auto p-2 hover:bg-white hover:text-black transition-colors duration-300">
                       scroll
                     </div>
                   </Link>
