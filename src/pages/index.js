@@ -11,6 +11,7 @@ export default function Home() {
   return (
     <>
       <HeroSlider />
+      <div>Hello RT my</div>
       <AboutUsSection />
       <TechSlider />
       <OurServicesSection />
