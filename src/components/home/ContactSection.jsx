@@ -41,7 +41,7 @@ const ContactSection = () => {
       <div className="container flex flex-col md:flex-row gap-10 justify-between pl-0 md:pl-14 py-10 md:py-20 my-16 sm:flex-row">
         <div className="w-full md:w-1/3 relative flex gap-10 flex-col">
           <h3 className="text-3xl md:text-6xl text-white font-karla font-normal uppercase leading-none">
-            Looking <br/>for a tech partner?
+            Looking <br />for a tech partner?
           </h3>
           <p className="text-3xl text-white font-karla font-light text-justify leading-snug hidden md:block">
             Get in touch with us today. Our team is ready to discuss how we can
