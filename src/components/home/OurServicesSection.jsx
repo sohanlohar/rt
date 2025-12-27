@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import servicesSlide1 from "../../assets/images/services-slide1.jpg";
 import servicesSlide2 from "../../assets/images/services-slide2.jpeg";
 import servicesSlide3 from "../../assets/images/services-slide3.jpeg";
@@ -12,7 +13,7 @@ const slides = [
     description:
       "Our data engineering services help you extract valuable insights, optimize operations, and make data-driven decisions.",
     image: servicesSlide1,
-    bggredient:
+    bgGradient:
       "linear-gradient(90deg, #014D57 0%, rgba(1, 110, 124, 0.6) 100%)",
     textDark: false,
   },
@@ -21,7 +22,7 @@ const slides = [
     description:
       "We Build custom software solutions that drive business growth. Our development team creates efficient, scalable applications tailored to your specific needs.",
     image: servicesSlide2,
-    bggredient:
+    bgGradient:
       "linear-gradient(90deg, #F9F9F9 0%, rgba(210, 210, 210, 0.6) 100%)",
     textDark: true,
   },
@@ -30,7 +31,7 @@ const slides = [
     description:
       "We Build custom software solutions that drive business growth. Our development team creates efficient, scalable applications tailored to your specific needs.",
     image: servicesSlide3,
-    bggredient:
+    bgGradient:
       "linear-gradient(90deg, #FEC286 0%, rgba(255, 255, 255, 0.6) 100%)",
     textDark: true,
   },
@@ -39,7 +40,7 @@ const slides = [
     description:
       "Integrate seamlessly and unlock new opportunities. Our API development services enable data sharing, system interoperability, and efficient business processes.",
     image: servicesSlide4,
-    bggredient:
+    bgGradient:
       "linear-gradient(90deg, #B5D0D3 0%, rgba(181, 208, 211, 0.6) 100%)",
     textDark: true,
   },
@@ -48,7 +49,7 @@ const slides = [
     description:
       "We Create exceptional user experiences that boost customer satisfaction and loyalty. Our design expertise enhances brand perception and drives conversions.",
     image: servicesSlide5,
-    bggredient:
+    bgGradient:
       "linear-gradient(90deg, #FFE4CB 0%, rgba(255, 255, 255, 0.6) 100%)",
     textDark: true,
   },
@@ -57,7 +58,7 @@ const slides = [
     description:
       "We are focused on Mitigating risks and ensuring product quality. Our comprehensive testing services help you deliver reliable software that meets user expectations.",
     image: servicesSlide6,
-    bggredient:
+    bgGradient:
       "linear-gradient(90deg, #225A77 0%, rgba(34, 90, 119, 0.6) 100%)",
     textDark: false,
   },
@@ -96,34 +97,40 @@ const OurServicesSection = () => {
           {slides.map((slide, index) => {
             return (
               <div
-                className="stacking-slide relative !bg-cover !bg-center px-8 md:px-14 py-10 md:py-20 rounded-xl md:rounded-40 text-white flex justify-between flex-col h-[260px] md:h-[515px]"
-                style={{
-                  background: `${slide.bggredient}, url('${slide.image.src}')`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
+                className="stacking-slide relative overflow-hidden px-8 md:px-14 py-10 md:py-20 rounded-xl md:rounded-40 text-white flex justify-between flex-col md:h-[515px]"
                 key={index}
               >
+                {/* Background Image */}
+                <Image
+                  src={slide.image}
+                  alt={slide.title}
+                  fill
+                  className="object-cover -z-20"
+                />
+
+                {/* Gradient Overlay */}
+                <div
+                  className="absolute inset-0 -z-10"
+                  style={{ background: slide.bgGradient }}
+                />
+
                 <h2
-                  className={`heading-h3 z-10  ${
-                    slide.textDark ? "text-black" : "text-white"
-                  }`}
+                  className={`heading-h3 z-10 ${slide.textDark ? "text-black" : "text-white"
+                    }`}
                 >
                   {slide.title}
                 </h2>
                 <p
-                  className={`text-sm md:text-2xl z-10 ${
-                    slide.textDark ? "text-black" : "text-white"
-                  } font-light font-karla`}
+                  className={`text-sm md:text-2xl z-10 ${slide.textDark ? "text-black" : "text-white"
+                    } font-light font-karla`}
                 >
                   {slide.description}
                 </p>
                 <button
-                  className={`invisible w-fit z-10 border hover:border-primary-dark ${
-                    slide.textDark
-                      ? "text-black border-black"
-                      : "text-white border-white"
-                  }   rounded-full font-karla text-sm md:text-xl px-8 py-2 hover:bg-primary-dark hover:text-white`}
+                  className={`w-fit z-10 border hover:border-primary-dark ${slide.textDark
+                    ? "text-black border-black"
+                    : "text-white border-white"
+                    } rounded-full font-karla text-sm md:text-xl px-8 py-2 hover:bg-primary-dark hover:text-white transition-all duration-300`}
                 >
                   EXPLORE MORE
                 </button>

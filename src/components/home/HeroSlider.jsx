@@ -68,11 +68,11 @@ const HeroSlider = () => {
   const settings = {
     cssEase: "linear",
     centerMode: false,
-    autoplay: false,
+    autoplay: true,
     speed: 800,
     arrows: false,
     pauseOnHover: true,
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -82,7 +82,7 @@ const HeroSlider = () => {
       <Slider {...settings}>
         {slidesData.map((slide, index) => {
           return (
-            <div className="slide-wrapper relative h-[calc(80vh-130px)] md:h-[calc(100vh-130px)]" key={slide.title}>
+            <div className="slide-wrapper relative h-[calc(70vh-130px)] md:h-[calc(100vh-130px)]" key={slide.title}>
               {/* Optimized Background Image */}
               <Image
                 src={slide.background}
